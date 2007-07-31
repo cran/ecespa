@@ -1,0 +1,25 @@
+citHeader("To cite", sQuote("ecespa"), "in publications, please use:")
+
+citEntry(entry = "article",
+         title = "Introduccion al analisis de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas.",
+         author = personList(
+           as.person("Marcelino de la Cruz Rot") 
+           ),
+         journal = "Ecosistemas",
+         volume= "15",
+         number = "3",
+         pages = "19--39",
+         year  = "2006",
+         url   = "www.revistaecosistemas.net/pdfs/448.pdf",
+	 textVersion = paste(
+		"De la Cruz, M. (2006).",
+		"Introduccion al analisis de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas.",
+	        "Ecosistemas 15 (3): 19-39.",
+         	"URL: www.revistaecosistemas.net/pdfs/448.pdf")
+         )
+
+
+citFooter("For references to additional papers describing the use of",
+          sQuote("ecespa"),
+	  "see", sQuote("help(\"ecespa\")."))
+

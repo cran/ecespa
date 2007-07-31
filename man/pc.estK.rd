@@ -12,8 +12,8 @@ Kclust(r, sigma2, rho)
 \arguments{
   \item{Kobs}{ Empirical \eqn{K}-function. }
   \item{r}{ Sequence of distances at which function \eqn{K} has been estimated. }
-  \item{sigma2}{ Starting value for the parameter \eqn{sigma2} of the Poisson Cluster process. }
-  \item{rho}{ Starting value for the parameter \eqn{rho} of the Poisson Cluster process. }
+  \item{sigma2}{ Optional. Starting value for the parameter \eqn{sigma2} of the Poisson Cluster process. }
+  \item{rho}{ Optional. Starting value for the parameter \eqn{rho} of the Poisson Cluster process. }
 }
 \details{
 The algorithm fits the Poisson cluster point process to a point pattern, by finding the parameters of the Poisson cluster model
@@ -55,8 +55,9 @@ contrast criterion are set up by the sequence of values of \eqn{r} and \eqn{Kobs
 \references{ Diggle, P. J. 2003. \emph{Statistical analysis of spatial point patterns}. Arnold, London. }
 \author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}, inspired by some code of  Philip M. Dixon \url{http://www.public.iastate.edu/~pdixon/}}
 
-\seealso{some functions in \pkg{spatstat}: \code{\link[spatstat]{mincontrast}} for a more general implementation of the method of mimimum contrast;
-\code{\link[spatstat]{matclust.estK}} and \code{\link[spatstat]{lgcp.estK}} fit other appropriate processes for clustered patterns.}
+\seealso{ \code{\link{ipc.estK}} for fitting the inhomogeneous Poisson cluster process; some functions in \pkg{spatstat}
+( \code{\link[spatstat]{matclust.estK}} and \code{\link[spatstat]{lgcp.estK}}) fit other appropriate processes for clustered patterns;
+\code{\link[spatstat]{mincontrast}} performs a more general implementation of the method of mimimum contrast.}
 \examples{
 \dontrun{
 
@@ -64,7 +65,7 @@ data(gypsophylous)
 
 ## Estimate K function ("Kobs").
 
-gyps.env <- envelope(gypsophylous, Kest, correction="iso")
+gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=99)
 
 plot(gyps.env, sqrt(./pi)-r~r)
 
@@ -82,7 +83,7 @@ lines(gyps.env$r,sqrt(Kclust(gyps.env$r, cosa.pc$sigma2,cosa.pc$rho)/pi)-gyps.en
 ## A kind of pointwise test of the gypsophylous pattern been a realisation
 ## of the fitted model, simulating with sim.poissonc and using function J (Jest).
 
-gyps.env.sim <- envelope(gypsophylous, Jest, 
+gyps.env.sim <- envelope(gypsophylous, Jest, nsim=99,
                     simulate=expression(sim.poissonc(gypsophylous,
 		    sigma=sqrt(cosa.pc$sigma2), rho=cosa.pc$rho)))
 

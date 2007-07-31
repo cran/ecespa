@@ -36,7 +36,12 @@ that the position of each offspring relative to its parent follows a radially sy
 Be careful as the paramted returned by \code{\link{pc.estK}} is \eqn{sigma^2} while \code{sim.poissonc} takes 
 its square root, i.e. \eqn{sigma}.
 }
-\seealso{ \code{\link[spatstat]{rNeymanScott}} in \pkg{spatstat}}
+\section{Warning}{
+This implementation simulates only point patterns within rectangular windows. Use  \code{\link{ipc.estK}} to fit and 
+ \code{\link{rIPCP}} (or the \code{spatstat} functions) to simulate point patterns within irregular windows.
+}
+\seealso{ \code{\link{rIPCP}} to simulate inhomogeneous PCP; \code{\link[spatstat]{rNeymanScott}} 
+and \code{\link[spatstat]{rThomas}} in \pkg{spatstat} }
 \examples{
 \dontrun{
 

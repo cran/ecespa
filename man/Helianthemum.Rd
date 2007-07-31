@@ -6,7 +6,7 @@
 \description{
   Locations of \emph{H. squamatum} adult plants and seedlings in a 6 m x 7 m plot over gypsum soil 
 in \enc{Chinchón}{Chinchon} (near Madrid, Spain). These are part of the data collected by Romao (2003) that have been
- analyzed several times (Escudero \emph{et al.}2005, De la Cruz 2006, De la Cruz ,\emph{et al.} 2007).
+ analyzed several times (Escudero \emph{et al.}2005, De la Cruz 2006, De la Cruz et al. \emph{in press.} ).
  The coordinates of the plans are given in cm. 
 
 }
@@ -26,13 +26,14 @@ in \enc{Chinchón}{Chinchon} (near Madrid, Spain). These are part of the data col
  y constricciones abioticas.} Tesis Doctoral. Universidad Politecnica de Madrid.}
 }
 \references{
-  \enc{De la Cruz, M. 2006. Introducción al análisis de datos mapeados o algunas de las (muchas) cosas
- que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3.}{De la Cruz, M. 2006. Introduccion al analisis 
- de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3.} 
+
+   \enc{De la Cruz, M. 2006. Introducción al análisis de datos mapeados o algunas de las (muchas) cosas
+ que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.}{De la Cruz, M. 2006. Introduccion al analisis 
+ de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.} 
 \url{http://www.revistaecosistemas.net/pdfs/448.pdf}.
 
-De la Cruz, M., Romao, R.L. & Escudero, A. 2007. Where do seedlings go? A spatio-temporal analysis of
-early mortality in a semiarid specialist. \emph{Submitted}.
+De la Cruz, M., Romao, R.L., Escudero, A. & Maestre, F.T.  \emph{In press}. Where do seedlings go? A spatio-temporal analysis of
+early mortality in a semiarid specialist. \emph{Ecography}.
 
 Escudero, A., Romao, R.L., De la Cruz, M. & Maestre, F. 2005. Spatial pattern and neighbour effects on 
 \emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{J. Veg. Sci.}, \bold{16}: 383-390.

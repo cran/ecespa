@@ -1,14 +1,16 @@
 \name{marksum}
 \alias{marksum}
-\alias{marksum.plot}
+\alias{plot.ecespa.marksum}
+\alias{print.ecespa.marksum}
 \title{ Mark-sum measure }
 \description{
   An exploratory data analysis technique for marked point patterns. The marked point pattern is mapped to a random field for visual inspection.
 }
 \usage{
 marksum(mippp, R = 10, nx = 30, ny = 30)
-marksum.plot(mimarksum, what="normalized", gris=FALSE,
-            contour=FALSE, interpol=TRUE, leip=100, main="", ...)
+
+## S3 method for ploting objects of class 'ecespa.marksum':
+plot.ecespa.marksum(x, what="normalized",  contour=F, grid=F, ...)
 
 }
 \arguments{
@@ -17,14 +19,12 @@ marksum.plot(mimarksum, what="normalized", gris=FALSE,
   \item{nx}{Grid density (for estimation) in the x-side. }
   \item{ny}{ Grid density (for estimation) in the y-side. }
   
-  \item{mimarksum}{Result of applying \code{marksum} to a point pattern.}
+  \item{x}{An object of class \code{'ecespa.marksum'}. Usually, the result of applying \code{marksum} to a point pattern.}
   \item{what}{What to plot. One of \code{"marksum"} (raw mark sum measure), \code{"point"} (point sum measure) or \code{"normalized"} (normalized sum measure).} 
-  \item{gris}{Logical; if \code{"TRUE"} display map in grey levels.}
-  \item{contour}{Logical; if \code{"TRUE"} add contour to map.}
-  \item{interpol}{Logical; if \code{"TRUE"} display interpolated results (with function \code{\link[akima]{interp}} of \pkg{akima}).}
-  \item{leip}{Number of points in the side of the grid of points to interpolate the results.}
-  \item{main}{Text or expression to be displayed as a title in the map.}
-  \item{...}{Additional parametrs to \code{\link{contour}}.}
+   \item{contour}{Logical; if \code{"TRUE"} add contour to map.}
+    \item{grid}{Logical; if \code{"TRUE"} add marked grid to map.}
+    \item{...}{Additional parameters to \code{\link[spatstat]{smooth.ppp}}, \code{\link[spatstat]{density.ppp}} or \code{\link[spatstat]{as.mask}}, to control 
+                  the  parameters of the smoothing kernel, pixel resolution, etc. }
 }
 \details{
   Penttinen (2006) defines the \emph{mark-sum measure} as a smoothed summary measuring locally the contribution of points and marks. For any fixed location \eqn{x} within the 
@@ -37,7 +37,7 @@ marksum.plot(mimarksum, what="normalized", gris=FALSE,
   \code{ny}.
 }
 \value{
-  \code{marksum} gives a list with the following elements:
+  \code{marksum} gives an object of class \code{'ecespa.marksum'}; basically a list with the following elements:
    \item{normalized }{Normalized mark-sum measure estimated in the grid points. } 
   \item{marksum }{Raw mark-sum measure estimated in the grid points. } 
   \item{pointsum }{Point-sum measure estimated in the grid points. } 
@@ -45,30 +45,34 @@ marksum.plot(mimarksum, what="normalized", gris=FALSE,
   \item{grid}{ Grid of points. } 
   \item{nx }{Density of the estimating grid  in the x-side. } 
   \item{ny }{Density of the estimating grid  in the x-side. } 
+  \item{dataname }{Name of the ppp object analysed. } 
   \item{R}{ Radius. The distance argument \emph{r} at which the mark-sum measure has been computed. }
   \item{window}{Window of the point pattern.}
   
-  \code{marksum.plot} plots the selected mark-sum measure.
+  \code{plot.ecespa.marksum} plots the selected mark-sum measure.
 }
 \references{ 
 Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook of the Finnish Statistical Society}, pp. 70-91. 
 }
 \author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}}
 
-\seealso{ \code{\link{getis}}, related to the point-sum measure, and  \code{\link[spatstat]{markstats}} for designing different implementations }
+\seealso{ \code{\link{getis}}, related to the point-sum measure, and  \code{\link[spatstat]{markstats}} for designing different implementations. }
 \examples{
  \dontrun{
    
  data(seedlings1)
    
- seed.m <- marksum(seedlings1, R=20)
+ seed.m <- marksum(seedlings1, R=25)
 
- marksum.plot(seed.m, what="marksum")  # raw mark-sum measure
+ plot(seed.m, what="marksum", sigma = 5)  # raw mark-sum measure; sigma is bandwith for smoothing
 
- marksum.plot(seed.m, what="pointsum") # point sum measure
+ plot(seed.m, what="pointsum", sigma = 5) # point sum measure
    
- marksum.plot(seed.m,  what="normalized") # normalized  mark-sum measure
-  
-  }
+ plot(seed.m,  what="normalized", dimyx=200, contour=TRUE, sigma = 5) # normalized  mark-sum measure
+
+# the same with added grid
+plot(seed.m,  what="normalized", dimyx=200, contour=TRUE, sigma = 5, grid=TRUE) # normalized  mark-sum measure
+
+}
 }  
 \keyword{ spatial }

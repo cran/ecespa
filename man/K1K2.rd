@@ -51,12 +51,12 @@ together with the observed difference in each case (respectively \code{K1-K2}, \
 
 \references{ 
  \enc{De la Cruz, M. 2006. Introducción al análisis de datos mapeados o algunas de las (muchas) cosas
- que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3.}{De la Cruz, M. 2006. Introduccion al analisis 
- de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3.} 
+ que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.}{De la Cruz, M. 2006. Introduccion al analisis 
+ de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.} 
 \url{http://www.revistaecosistemas.net/pdfs/448.pdf}.
 
-De la Cruz, M., Romao, R.L. & Escudero, A. 2007. Where do seedlings go? A spatio-temporal analysis of
-early mortality in a semiarid specialist. \emph{Submitted}.
+De la Cruz, M., Romao, R.L., Escudero, A. & Maestre, F.T.  \emph{In press}. Where do seedlings go? A spatio-temporal analysis of
+early mortality in a semiarid specialist. \emph{Ecography}.
 
 Diggle, P.J. 2003. \emph{Statistical analysis of spatial point patterns}. Arnold, London.
 
@@ -70,7 +70,7 @@ Dixon, P. M. 2002. Ripley's K function. In \emph{The encyclopedia of environmetr
 data(Helianthemum)
 
 cosa12 <- K1K2(Helianthemum, j="deadpl", i="survpl", r=seq(0,200,le=201),
-		 nsim=99, nrank=1, correction="isotropic")
+		 nsim=999, nrank=1, correction="isotropic")
 
 %%## plots of figure 9 in De la Cruz (2006)
 plot(cosa12$k1k2, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),

@@ -1,7 +1,7 @@
 \encoding{latin1}
 \name{K012}
 \alias{K012}
-\title{ Tests association/repulsion between a "fixed" point pattern and several types of a "variable" point pattern }
+\title{ Tests against 'independent labelling' }
 \description{
 Given a "fixed" point pattern and some process that asign labels (I,J) to another "variable" point pattern,
   \code{K012} estimates the combined bivariate K function between the fixed pattern and every type of the 
@@ -27,7 +27,7 @@ A rank of 1 means that the minimum and maximum simulated values will be used. }
 }
 \details{
   This test was developped to answer some questions about the spatial pattern of survival and
-mortality of seedlings and its relationships with adult plants in a plant community (De la Cruz \emph{et al.} 2007).
+mortality of seedlings and its relationships with adult plants in a plant community (De la Cruz \emph{et al. In press} ).
  In order to evaluate the spatial structures of seedlings fates (survive or die), the null hypothesis of random labelling (Cuzick & Edwards 1990, Dixon 2002)
  would be the appropriate one. This kind of pattern is the result of two hierarchical processes: a first one that generates the pattern of points (seedlings)
  and other that assign "labels" (i.e. "die", "survive") to the points. On the other hand,  to analyze the relationships between the spatial pattern of 
@@ -59,12 +59,12 @@ Cuzick, J. and Edwards, R. 1990. Spatial clustering for inhomogeneous population
  \emph{Journal of the Royal Statistical Society} B \bold{ 52}: 73-104.
 
  \enc{De la Cruz, M. 2006. Introducción al análisis de datos mapeados o algunas de las (muchas) cosas
- que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3.}{De la Cruz, M. 2006. Introduccion al analisis 
- de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3.} 
+ que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.}{De la Cruz, M. 2006. Introduccion al analisis 
+ de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.} 
 \url{http://www.revistaecosistemas.net/pdfs/448.pdf}.
 
-De la Cruz, M., Romao, R.L. & Escudero, A. 2007. Where do seedlings go? A spatio-temporal analysis of
-early mortality in a semiarid specialist. \emph{Submitted}.
+De la Cruz, M., Romao, R.L., Escudero, A. & Maestre, F.T.  \emph{In press}. Where do seedlings go? A spatio-temporal analysis of
+early mortality in a semiarid specialist. \emph{Ecography}.
 
 Dixon, P. M. 2002. Ripley's K function. In \emph{The encyclopedia of environmetrics} 
 (eds. El-Shaarawi, A.H. & Piergorsch, W.W.), pp. 1976-1803. John Wiley & Sons Ltd, NY.
