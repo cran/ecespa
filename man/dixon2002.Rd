@@ -16,20 +16,20 @@ dixon2002(datos, nsim = 99)
 
 \value{
   A list with the following components:
-  \item{ON }{nearest neighbor counts in table format. From row sp to column sp.  }
-  \item{EN }{expected nearest neighbor counts in table format}
-  \item{Z }{Z-score for testing whether the observed count equals the expected count}
-  \item{S }{Segregation measure}
-  \item{pZas }{p-values based on the asymptotic normal distribution of the Z statistic}
-  \item{pZr }{If nsim !=0, p-values of the Z-score based on the randomization distribution}
-  \item{C }{Overall test of random labelling}
-  \item{Ci }{Species-specific test of random labelling}
-  \item{pCas }{p-value of the overall test from the asymptotic chi-square distribution with the appropriate degrees of freedom}
-  \item{pCias }{p-values of the species-specific tests from the asymptotic chi-square distribution with the appropriate degrees of freedom}
-  \item{pCr }{If nsim !=0, p-value of the overall test from the randomization distribution}
-  \item{pCir }{If nsim !=0, p-values of the species-specific tests from the randomization distribution}
-  \item{tablaZ }{table with ON, EN, Z, S, pZas and pZr in pretty format, as in the table II of Dixon (2002)}
-  \item{tablaC }{table with C, Ci, pCas,pCias, pCr and pCir  in pretty format, as in the table IV of Dixon (2002)}
+  \item{ON }{Observed nearest neighbor counts in table format. From row sp to column sp.  }
+  \item{EN }{Expected nearest neighbor counts in table format.}
+  \item{Z }{Z-score for testing whether the observed count equals the expected count.}
+  \item{S }{Segregation measure.}
+  \item{pZas }{P-values based on the asymptotic normal distribution of the Z statistic.}
+  \item{pZr }{If nsim !=0, p-values of the Z-score based on the randomization distribution.}
+  \item{C }{Overall test of random labelling.}
+  \item{Ci }{Species-specific test of random labelling.}
+  \item{pCas }{P-value of the overall test from the asymptotic chi-square distribution with the appropriate degrees of freedom.}
+  \item{pCias }{P-values of the species-specific tests from the asymptotic chi-square distribution with the appropriate degrees of freedom.}
+  \item{pCr }{If nsim !=0, p-value of the overall test from the randomization distribution.}
+  \item{pCir }{If nsim !=0, p-values of the species-specific tests from the randomization distribution.}
+  \item{tablaZ }{table with ON, EN, Z, S, pZas and pZr in pretty format, as in the table II of Dixon (2002).}
+  \item{tablaC }{table with C, Ci, pCas,pCias, pCr and pCir  in pretty format, as in the table IV of Dixon (2002).}
 }
 \details{
   
@@ -38,12 +38,12 @@ dixon2002(datos, nsim = 99)
   
   \deqn{S[i] = log{[(N[ii]/(N[i]-N[ii])] / [(N[i]-1)/(N-N[i])]}}
   
-  where \eqn{N[i]} is the number of \emph{i} individuals, \eqn{N[ii]} is the frequency of species \emph{i} as neighbor of especies \emph{i} and \eqn{N} is the total
+  where \eqn{N[i]} is the number of individuals of species \emph{i}, \eqn{N[ii]} is the frequency of species \emph{i} as neighbor of especies \emph{i} and \eqn{N} is the total
   number of locations.   Values of \eqn{S[i]} larger than 0 indicate that species \emph{i} is segregated; the larger the value of \eqn{S[i]}, the more extreme the segregation. 
   Values of \eqn{S[i]} less than 0 indicate that species \emph{i} is is found as neighbor of itself less than expected under random labelling. 
   Values of \eqn{S[i]} close to 0 are consistent with random labelling of the neighbors of species \emph{i}.
   
-  Dixon (2002) proposed also a \strong{pairwise segregation index} for the off-diagonal elements of the contingency table:
+  Dixon (2002) also proposed a \strong{pairwise segregation index} for the off-diagonal elements of the contingency table:
   
   \deqn{S[ij] = log{[(N[ij]/(N[i]-N[ij])] / [(N[i])/(N-N[j])-1]}}
   
@@ -56,10 +56,10 @@ dixon2002(datos, nsim = 99)
   and variance 1;  its asymptotic p-valure  can be obtained from the numerical evaluation of the cumulative normal distribution  or by simulation, i.e, by condicting
   a randomization test (appropriate when the sample size is small). 
      
-  An \strong{overall test of random labelling} (i.e. a test that all counts in the \eqn{k x k} nearest-neighbor contingency table are equal to their expected counts) is based
+  An \strong{overall test of random labelling} (i.e. a test that all counts in the \eqn{k} x \eqn{k} nearest-neighbor contingency table are equal to their expected counts) is based
   on the quadratic form
-  \deqn{ C = (N-EN)' Sigma^-1 (N - EN)}
-where \eqn{N} is the vector of all cell counts in the contingency table, \eqn{Sigma} is the variance-covariance matrix of those counts and \eqn{Sigma^-1}
+  \deqn{ C = (N-EN)' Sigma^- (N - EN)}
+where \eqn{N} is the vector of all cell counts in the contingency table, \eqn{Sigma} is the variance-covariance matrix of those counts and \eqn{Sigma^-}
 is a generalized inverse of \eqn{Sigma}. Under the null hypothesis of random labelling of points, \eqn{C}  has a asymptotic Chi-square distribution with \eqn{k(k-1)} 
 degrees of freedom (if the sample sizes are small its distribution should be estimated using Monte-Carlo simulation). P-values are computed from the probability of observing
 equal or larger values of \eqn{C}.
@@ -71,14 +71,20 @@ sum to the overall \eqn{C}.
 
  \section{Warning}{
 The \eqn{S[i]} and \eqn{S[ij]} statistics asume that the spatial nearest-neighbor process is stationary, at least to second order, 
-  i.e., have the same sign in every part of the entire plot. A biologically heterogeneous process violates this asumption.
+  i.e., have the same sign in every part of the entire plot. A biologically heterogeneous process will violate this asumption.
   }
 \references{ Dixon, P.M. 2002. Nearest-neighbor 
-contingency table analysis of spatial segregation for several species. \emph{Ecoscience}, \bold{9}(2): 142-151.  }
-\author{ Philip M. Dixon \url{http://www.public.iastate.edu/~pdixon/}. Marcelino de la Cruz \email{marcelino.delacruz@upm.es} wrote the wrapper code  for the \code{ecespa} version}
+contingency table analysis of spatial segregation for several species. \emph{Ecoscience}, \bold{9} (2): 142-151.  }
+\author{ Philip M. Dixon \url{http://www.public.iastate.edu/~pdixon/}. Marcelino de la Cruz \email{marcelino.delacruz@upm.es} wrote the wrapper code  for the \code{ecespa} version.}
+\seealso{\code{\link{K012}} for another segregation test, based in the differences of univariate and bivariate \eqn{K}-functions.}
 \examples{
+\dontrun{
+
 data(swamp)
-\dontrun{dixon2002(swamp,nsim=99)}
+
+dixon2002(swamp,nsim=99)
+
+}
 }
 \keyword{ math }
 \keyword{ spatial }

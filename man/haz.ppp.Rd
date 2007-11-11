@@ -19,10 +19,12 @@ It establishes the window of observation as the rectangle defined by the xy rang
 A point pattern with the format of spatstat v. < 2.0
 }
 \author{ Marcelino de la Cruz }
-\seealso{ \code{\link[spatstat]{ppp}} }
+\seealso{ \code{\link[spatstat]{ppp}}, \code{\link[spatstat]{as.ppp}}  }
 \examples{
-require(spatstat)
+\dontrun{
+
 data(fig1)
+
 plot(fig1) #typical xyplot
 
 fig1.ppp <- haz.ppp (fig1)
@@ -31,5 +33,6 @@ fig1.ppp
 
 plot(fig1.ppp) # point pattern plot of spatstat
 
+}
 }
 \keyword{ spatial }

@@ -1,9 +1,9 @@
 `p2colasr` <-
 function(Z,nsim=length(Z)){
    ## calcula el p-value para "two-sided hypotesis test" siguiendo el
-   ## método de Agresti & Min (2001) según la descripción de Dixon (2002:145)
-   ## Z es un vector con el estadístico observado en la primera posición y 
-   ## a continuación todos los valores simulados
+   ## m<e9>todo de Agresti & Min (2001) seg<fa>n la descripci<f3>n de Dixon (2002:145)
+   ## Z es un vector con el estad<ed>stico observado en la primera posici<f3>n y 
+   ## a continuaci<f3>n todos los valores simulados
 
    if(Z[1]<0){
       p1=rank(Z)[1]/(nsim+1)

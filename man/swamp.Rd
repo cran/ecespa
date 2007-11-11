@@ -10,7 +10,7 @@ The 734 mapped stems included 156 Carolina ash (\emph{Fraxinus caroliniana}),
 98 Bald cypress (\emph{Taxodium distichum}) and 60 stems of 8 additional species.
 Although the plots were set up by Bill Good and their spatial patterns described in Good
 and Whipple(1982), the plots have been maintained and resampled by Rebecca Sharitz and her colleagues of the Savannah River Ecology Laboratory.
-There are slightly different versions of the good plot data. Every time the plots are
+There are slightly different versions of the Good plot data. Every time the plots are
 resampled, some errors are corrected. This is mostly a concern for the
 biologists. The different versions are very similar; they are all very good
 examples of a marked spatial point pattern.
@@ -23,13 +23,14 @@ examples of a marked spatial point pattern.
     \item{\code{x}}{Cartesian x-coordinate of tree}
     \item{\code{y}}{Cartesian y-coordinate of tree}
     \item{\code{sp}}{a factor with levels indicating the species
- of each tree:\tabular{ll}{
-     \code{FX}\tab Carolina ash \cr
-	 \code{NS}\tab Swamp tupelo \cr
-	 \code{NX}\tab Water tupelo \cr
-	 \code{TD}\tab Bald cypress \cr
+ of each tree:}
+ \tabular{ll}{
+     \code{FX}\tab Carolina ash (\emph{Fraxinus caroliniana})\cr
+	 \code{NS}\tab Swamp tupelo (\emph{Nyssa sylvatica})\cr
+	 \code{NX}\tab Water tupelo (\emph{Nyssa aquatica})\cr
+	 \code{TD}\tab Bald cypress (\emph{Taxodium distichum})\cr
 	 \code{OT}\tab Other species\cr
-	}}
+	}
   }
 }
 \source{

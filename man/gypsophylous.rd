@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{gypsophylous}
 \alias{gypsophylous}
 \docType{data}
@@ -13,20 +14,27 @@
   for details of the format.
 }
 \source{
-Romao, R.L. 2003. \emph{Estructura espacial de comunidades de gipsofitos: interacciones bioticas
- y constricciones abioticas.} Tesis Doctoral Inedita. Universidad Politecnica de Madrid.
+\enc{Romao, R.L. 2003. \emph{Estructura espacial de comunidades de gipsófitos: interacciones bióticas
+ y constricciones abióticas.} Tesis Doctoral. Universidad Politécnica de Madrid.}{Romao, R.L. 2003. \emph{Estructura espacial de comunidades de gipsofitos: interacciones bioticas
+ y constricciones abioticas.} Tesis Doctoral. Universidad Politecnica de Madrid.}
 }
 \references{
-  De la Cruz, M. 2006. Introduccion al analisis de datos mapeados o algunas de las (muchas) cosas
- que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3. 
-\url{http://www.revistaecosistemas.net/articulo.asp?Id=488&Id_Categoria=1&tipo=portada}.
+  \enc{De la Cruz, M. 2006. Introducción al análisis de datos mapeados o algunas de las (muchas) cosas
+ que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3.}{De la Cruz, M. 2006. Introduccion al analisis 
+ de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas}. 2006/3.} 
+\url{http://www.revistaecosistemas.net/pdfs/448.pdf}.
 
 Escudero, A., Romao, R.L., De la Cruz, M. & Maestre, F. 2005. Spatial pattern and neighbour effects on 
 \emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{J. Veg. Sci.}, \bold{16}: 383-390.
 
 }
 \examples{
+\dontrun{
+
 data(gypsophylous)
+
 plot(gypsophylous)
+
+}
 }
 \keyword{datasets}

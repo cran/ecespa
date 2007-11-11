@@ -4,7 +4,7 @@ function(datos,nsim=99){
    ## Son necesarias las funciones de Dixon
    ## check, ginv, NNid, mNNinfo2, mNNinfo,
    ## y mNNtest
-   ## además requiere la función p2colasr
+   ## adem<e1>s requiere la funci<f3>n p2colasr
    ## requiere una tabla con tres columnas: x, y, especie
    
    info=mNNinfo(xy=datos[,1:2],label=datos[,3])
@@ -25,7 +25,7 @@ function(datos,nsim=99){
    pCas= datos.test$C[2]
    pCias= datos.test$Ci[,2]
    
-   ## randomización de Z (y de C) para calcular 
+   ## randomizaci<f3>n de Z (y de C) para calcular 
    ## los p-values aleatorizados
    
    pZr = NULL

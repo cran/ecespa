@@ -1,6 +1,6 @@
 \name{sim.poissonc}
 \alias{sim.poissonc}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{ Simulate Poisson Cluster Process }
 \description{
   Generate a random point pattern, a simulated realisation of the Poisson Cluster Process
@@ -17,14 +17,16 @@ sim.poissonc(x.ppp, rho, sigma)
 }
 \details{
   The Poisson cluster processes are defined by the following postulates (Diggle 2003):
- \tabular{lll}{
-         PCP1 \tab   \tab   Parent events form a Poisson process with intensity \eqn{rho}.\cr
-         PCP2 \tab   \tab   Each parent produces a random number of offspring, accordingto a probability distribution \eqn{p[s]: s = 0, 1, 2, ...}\cr
-         PCP3 \tab   \tab   The positions of the offspring relative to their parents are distributed according to a bivariate pdf  \eqn{h}.\cr
+ \tabular{ll}{
+         \emph{PCP1}\tab Parent events form a Poisson process with intensity \eqn{rho}.\cr
+         \emph{PCP2}\tab Each parent produces a random number of offspring, according to a probability distribution \cr
+	                    \tab \eqn{p[s]: s = 0, 1, 2, ...}\cr
+         \emph{PCP3}\tab The positions of the offspring relative to their parents are distributed according to a bivariate pdf \eqn{h}.\cr
 	 }
 This implementation asumes that the probability distribution \eqn{p[s]} of offspring per parent is a Poisson distribution and 
 that the position of each offspring relative to its parent follows a radially symetric Gaussian distribution with pdf
-\deqn{h(x, y) = (2*pi*sigma^2)^-1 exp{-(x^2+y^2)/2*sigma^2}}
+
+\deqn{h(x, y) = [1/(2*pi*sigma^2)]* exp[-(x^2+y^2)/(2*sigma^2)]}
 
 }
 \value{The simulated point pattern (an object of class "\code{ppp}"). }
@@ -37,7 +39,7 @@ its square root, i.e. \eqn{sigma}.
 \seealso{ \code{\link[spatstat]{rNeymanScott}} in \pkg{spatstat}}
 \examples{
 \dontrun{
-require(spatstat)
+
 data(gypsophylous)
 
 ## Estimate K function ("Kobs").
@@ -57,7 +59,7 @@ lines(gyps.env$r,sqrt(Kclust(gyps.env$r, cosa.pc$sigma2,cosa.pc$rho)/pi)-gyps.en
 ## A kind of pointwise test of the pattern gypsophilous been a realisation
 ## of the fitted model, simulating with sim.poissonc and using function J (Jest).
 
-gyps.env.sim = envelope(gypsophylous, Jest, 
+gyps.env.sim <- envelope(gypsophylous, Jest, 
                     simulate=expression(sim.poissonc(gypsophylous,
 		    sigma=sqrt(cosa.pc$sigma2), rho=cosa.pc$rho)))
 

@@ -17,7 +17,7 @@ function(mippp, r=1:100){
      E0 = mean(sumatorio)
      E01 = mean(sumatorio1)
      Kmm = c(Kmm,E0/(lambda*mu^2))
-     Kmm1 = c(Kmm1,E01/(lambda)) ## Función K de puntos con marca = 1
+     Kmm1 = c(Kmm1,E01/(lambda)) ## Funci<f3>n K de puntos con marca = 1
    }
    return(list(r=r, Kmm=Kmm, Kmm.n=Kmm/Kmm1))
 }

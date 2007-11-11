@@ -3,7 +3,7 @@ function(X,i,j, nsim=99,nrank=1, r=NULL, correction= "isotropic"){
    marx <- marks(X)
    I <- (marx == i)
    J <- (marx == j)
-   k12 = Kmulti.uf(X, I, J, r, corre=correction)
+   k12 = Kmulti.ls(X, I, J, r, corre=correction)
 
    r= k12$r
    k1 =  Kest(split(X)[names(split(X))==i][[1]], r=r, correction=correction)
@@ -21,7 +21,7 @@ function(X,i,j, nsim=99,nrank=1, r=NULL, correction= "isotropic"){
       marx <- marks(X)
       I <- (marx == i)
       J <- (marx == j)
-      k12.s = Kmulti.uf(X, I, J, r=r, corre=correction)
+      k12.s = Kmulti.ls(X, I, J, r=r, corre=correction)
       k1.s =  Kest(split(X)[names(split(X))==i][[1]], r=r, correction=correction)
       k2.s =  Kest(split(X)[names(split(X))==j][[1]], r=r, correction=correction)
       k1k2.s  = cbind(k1k2.s, k1.s[[3]]-k2.s[[3]]) 
