@@ -16,8 +16,7 @@ Kci(mod1, mod2, correction="trans", nsim=99, ngrid=200, nrep=1e+05,
 Ki(mod1, correction="trans", nsim=99, ngrid=200, nrep=1e+05, r=NULL,
     spctype=1)
 
-## S3 ploth method for objects of class 'ecespa.kci':
-plot.ecespa.kci(x, type=1, q=0.025, kmean=TRUE, add=F, maine=NULL, 
+\method{plot}{ecespa.kci}(x, type=1, q=0.025, kmean=TRUE, add=FALSE, maine=NULL, 
        xlabe=NULL, ylabe=NULL, xlime=NULL, ylime=NULL, 
        lty=c(1,2,3), col=c(1,2,3), lwd=c(1,1,1), ...)
 

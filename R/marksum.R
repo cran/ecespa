@@ -4,7 +4,7 @@ function (mippp, R = 10, nx = 30, ny = 30)
     require(spatstat)
     dataname <- deparse (substitute(mippp))
     verifyclass(mippp, "ppp")
-    if (is.marked(mippp) != T) 
+    if (is.marked(mippp) != TRUE) 
         stop("marksum only implemented for **marked** patterns")
    #generate a grid of dimensions nx ny inside the window of the pattern
     grid <- gridcenters(mippp$window, nx, ny)

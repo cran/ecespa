@@ -9,8 +9,7 @@
 \usage{
 getis(mippp, nx = 30, ny = 30, R = 10)
 
-## S3 method for ploting ojects of class 'ecespa.getis':
-plot.ecespa.getis(x, type="k", interp=100, color=tim.colors(64),
+\method{plot}{ecespa.getis}(x, type="k", interp=100, color=tim.colors(64),
          contour=TRUE, points=TRUE,...)
 }
 \arguments{

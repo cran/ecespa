@@ -14,13 +14,13 @@ Some wrappers, functions and data sets for spatial point pattern analysis, with 
 \tabular{ll}{
 Package: \tab ecespa\cr
 Type: \tab Package\cr
-Version: \tab 1.1-0\cr
-Date: \tab 2008-07-31\cr
+Version: \tab 1.1-1\cr
+Date: \tab 2008-11-16\cr
 License: \tab GPL (>=2)\cr
 }
 }
 \author{
-Marcelino de la Cruz Rot, with contributions of Philip M. Dixon and heavily borrowing  Baddeley's & Turner's \pkg{spatstat} code.
+Marcelino de la Cruz Rot, with contributions of Philip M. Dixon and Jose M. Blanco-Moreno and heavily borrowing  Baddeley's & Turner's \pkg{spatstat} code.
 
 Mantainer: Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}
 }
@@ -370,11 +370,10 @@ plot (Ipc.env)
  
    data(syr1); data(syr2); data(syr3)
    
-   plot(syrjala.test(syr1, syr2, nsim=999)) #non-significant difference of distributions
+   plot(syrjala.test(syr1, syr2, nsim=999)) 
    
-   plot(syrjala.test(syr1, syr3, nsim=999)) #significant difference of distributions
-  
-
+   plot(syrjala.test(syr1, syr3, nsim=999)) 
+   
 
 
 

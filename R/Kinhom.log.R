@@ -42,7 +42,7 @@ function(A, lambda=NULL, mod=NULL, lifemark="0", prob=NULL,
     ## son los problemas t<ed>picos de decordinaci<f3>n con inside.owin en la versi<f3>n
     ## 1.11.1 de spatstat
 
-    dentro <- !is.na(lambda[Avivos,drop=F])
+    dentro <- !is.na(lambda[Avivos,drop=FALSE])
     Avivos <- Avivos[dentro]
 
     ## FIN DEL REC<c1>LCULO/CORRECCI<d3>N
@@ -59,7 +59,7 @@ function(A, lambda=NULL, mod=NULL, lifemark="0", prob=NULL,
       mod <- update(mod, Q=Avivos)
       lambda <- predict.ppm(mod, type="trend")
       
-      dentro <- !is.na(lambda[Avivos,drop=F])
+      dentro <- !is.na(lambda[Avivos,drop=FALSE])
       Avivos <- Avivos[dentro]
       
       Kas=cbind(Kas, Kinhom(Avivos , lambda,  correction=correction, 

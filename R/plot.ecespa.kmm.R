@@ -1,21 +1,21 @@
 `plot.ecespa.kmm` <-
 function(x,type="Kmm.n", q=0.025, 
-            xlime=NULL, ylime=NULL,  maine=NULL, add=F, kmean=TRUE,
+            xlime=NULL, ylime=NULL,  maine=NULL, add=FALSE, kmean=TRUE,
             ylabe=NULL, xlabe=NULL, lty=c(1,2,3), col=c(1,2,3), lwd=c(1,1,1),
              ...)
 {
    if(!is.null(x$nsim)){
 if (type == "Kmm.n") {        
     cosa <- cbind(x$kmm.n, 
-                  t(apply(x$kmmsim.n, 1, quantile, c(q,1-q), na.rm=T)))
-            cosamean <- t(apply(x$kmmsim.n, 1, mean, na.rm=T))
+                  t(apply(x$kmmsim.n, 1, quantile, c(q,1-q), na.rm=TRUE)))
+            cosamean <- t(apply(x$kmmsim.n, 1, mean, na.rm=TRUE))
     if(is.null(ylabe)) ylabe <- expression(normalized.K[mm](r)) 
             
 }
         if (type == "Kmm") {        
     cosa <- cbind(x$kmm, 
-                  t(apply(x$kmmsim, 1, quantile, c(q,1-q), na.rm=T)))
-            cosamean <- t(apply(x$kmmsim, 1, mean, na.rm=T))
+                  t(apply(x$kmmsim, 1, quantile, c(q,1-q), na.rm=TRUE)))
+            cosamean <- t(apply(x$kmmsim, 1, mean, na.rm=TRUE))
             if(is.null(ylabe)) ylabe <- expression(K[mm](r))
             
 

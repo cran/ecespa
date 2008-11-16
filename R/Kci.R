@@ -65,7 +65,7 @@ function(mod1,mod2,correction="trans", nsim=99,
       else if (Jsim=="spc") Jsim.ppp <- rIPCP (mod2, type=spctype)
       
       ## aseguramos que no haya NAs en el vector simulado de lambdas
-      dentro <- !is.na(lambdaJ[Jsim.ppp, drop=F]) 
+      dentro <- !is.na(lambdaJ[Jsim.ppp, drop=FALSE]) 
       Jsim.ppp <- Jsim.ppp[dentro] 
 
       ## simulated multivariate PP
@@ -79,7 +79,7 @@ function(mod1,mod2,correction="trans", nsim=99,
           else if (Isim=="spc") Isim.ppp <- rIPCP (mod1, type=spctype)
           
           ## aseguramos que no haya NAs en el vector simulado de lambdas
-          dentro <- !is.na(lambdaI[Isim.ppp, drop=F]) 
+          dentro <- !is.na(lambdaI[Isim.ppp, drop=FALSE]) 
           Isim.ppp <- Isim.ppp[dentro]
 
           ## simulated multivariate PP:

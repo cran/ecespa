@@ -22,9 +22,9 @@ if(inherits(mod1,"ecespa.minconfit")){
 ## correcci<f3>n de los problemas de descoordinaci<f3>n entre inside.owin y density en
 ## la versi<f3>n 1.11.1 de spatstat( hay que asegurarse de que no hay puntos fuera de 
 ## las ventanas de intensidad
- #      dentro = !is.na(lambdaI[I.ppp, drop=F])
+ #      dentro = !is.na(lambdaI[I.ppp, drop=FALSE])
  #      I.ppp=I.ppp[dentro]
- #      dentro = !is.na(lambdaJ[J.ppp, drop=F])
+ #      dentro = !is.na(lambdaJ[J.ppp, drop=FALSE])
  #      J.ppp=J.ppp[dentro]
 ##### FIN DE LA CORRECCI<d3>N
 
@@ -41,7 +41,7 @@ if(inherits(mod1,"ecespa.minconfit")){
                                                 control=list(p=1, nrep=nrep), verbose=FALSE) }
             else if (Isim=="spc") Isim.ppp = rIPCP (mod1, type=spctype)
 
-            dentro = !is.na(lambdaI[Isim.ppp, drop=F]) 
+            dentro = !is.na(lambdaI[Isim.ppp, drop=FALSE]) 
             Isim.ppp = Isim.ppp[dentro]
             ## K simuladas
             Kia.s= cbind(Kia.s, Kinhom(Isim.ppp, lambdaI, 

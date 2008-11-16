@@ -10,7 +10,7 @@
 marksum(mippp, R = 10, nx = 30, ny = 30)
 
 ## S3 method for ploting objects of class 'ecespa.marksum':
-plot.ecespa.marksum(x, what="normalized",  contour=F, grid=F, ...)
+\method{plot}{ecespa.marksum}(x, what="normalized",  contour=FALSE, grid=FALSE, ribbon=TRUE,col=NULL ,main=NULL,xlab="",ylab="",...)
 
 }
 \arguments{
@@ -23,6 +23,12 @@ plot.ecespa.marksum(x, what="normalized",  contour=F, grid=F, ...)
   \item{what}{What to plot. One of \code{"marksum"} (raw mark sum measure), \code{"point"} (point sum measure) or \code{"normalized"} (normalized sum measure).} 
    \item{contour}{Logical; if \code{"TRUE"} add contour to map.}
     \item{grid}{Logical; if \code{"TRUE"} add marked grid to map.}
+    \item{ribbon}{Logical; if \code{"TRUE"} add legend to map.}
+    \item{col}{Color table to use for the map ( see help file on image for details). }
+    \item{main}{Text or expression to add as a title to the plot.}
+    \item{xlab}{Text or expression to add as a label to axis x.}
+    \item{ylab}{Text or expression to add as a label to axis y.}
+        
     \item{...}{Additional parameters to \code{\link[spatstat]{smooth.ppp}}, \code{\link[spatstat]{density.ppp}} or \code{\link[spatstat]{as.mask}}, to control 
                   the  parameters of the smoothing kernel, pixel resolution, etc. }
 }
@@ -66,7 +72,7 @@ Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook 
 
  plot(seed.m, what="marksum", sigma = 5)  # raw mark-sum measure; sigma is bandwith for smoothing
 
- plot(seed.m, what="pointsum", sigma = 5) # point sum measure
+ plot(seed.m, what="pointsum", sigma = 5, col = tim.colors(30),) # point sum measure
    
  plot(seed.m,  what="normalized", dimyx=200, contour=TRUE, sigma = 5) # normalized  mark-sum measure
 

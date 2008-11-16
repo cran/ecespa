@@ -11,9 +11,8 @@
 \usage{
 Kmm(mippp, r = 1:10, nsim=NULL)
 
-## S3 method for ploting objects of class 'ecespa.kmm':
-plot.ecespa.kmm (x, type="Kmm.n", q=0.025, 
-            xlime=NULL, ylime=NULL,  maine=NULL, add=F, kmean=TRUE,
+\method{plot}{ecespa.kmm} (x, type="Kmm.n", q=0.025, 
+            xlime=NULL, ylime=NULL,  maine=NULL, add=FALSE, kmean=TRUE,
             ylabe=NULL, xlabe=NULL, lty=c(1,2,3), col=c(1,2,3), lwd=c(1,1,1),
              ...)
 

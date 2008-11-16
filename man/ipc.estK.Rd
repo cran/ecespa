@@ -11,8 +11,8 @@
 ipc.estK(mippp, lambda = NULL, correction = "iso", r = NULL, sigma2 = NULL,
             rho = NULL, q = 1/4, p = 2)
 
-# S3 method to plot objects of class 'ecespa.minconfit':
-plot.ecespa.minconfit(x, type="L", add=F, xlim=NULL, ylim=NULL, lwd=c(1,1),
+
+\method{plot}{ecespa.minconfit}(x, type="L", add=FALSE, xlim=NULL, ylim=NULL, lwd=c(1,1),
            lty=c(1,2), col=c(1,2), main=NULL, ...)
 }
 
