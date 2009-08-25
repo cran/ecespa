@@ -28,28 +28,28 @@ Mantainer: Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}
 \references{
 De la Cruz, M. 2008. \enc{Métodos para analizar datos puntuales. 
   En: \emph{Introducción al Análisis Espacial de Datos en Ecología y Ciencias Ambientales: Métodos y Aplicaciones } 
-  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 000-000. Asociación Española de Ecología Terrestre, Universidad Rey Juan Carlos
+  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 76-127. Asociación Española de Ecología Terrestre, Universidad Rey Juan Carlos
   y Caja de Ahorros del Mediterráneo, Madrid.}{Metodos para analizar datos puntuales. 
   En: \emph{Introduccion al Analisis Espacial de Datos en Ecologia y Ciencias Ambientales: Metodos y Aplicaciones } 
-  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 000-000. Asociacion Española de Ecologia Terrestre, Universidad Rey Juan Carlos
+  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 76-127. Asociacion Espanola de Ecologia Terrestre, Universidad Rey Juan Carlos
   y Caja de Ahorros del Mediterraneo, Madrid.}
   
 De la Cruz, M. and Escudero, A. 2008. Null models and tools for multivariate heterogeneous point patterns. \emph{Submitted}.
 
-De la Cruz, M., Romao, R.L.,  Escudero, A. and Maestre, F.T. \emph{In press}. Where do seedlings go? A spatio-temporal analysis of
- early mortality in a semiarid specialist. \emph{Ecography}.
+De la Cruz, M., Romao, R.L.,  Escudero, A. and Maestre, F.T. 2008. Where do seedlings go? A spatio-temporal analysis of
+ early mortality in a semiarid specialist. \emph{Ecography},31 DOI: 10.1111/j.2008.0906-7590.05299 .
 
 Diggle, P. J. 2003. \emph{Statistical analysis of spatial point patterns}. Arnold, London. 
 
 Dixon, P.M. 2002. Nearest-neighbor contingency table analysis of spatial segregation for several species.
   \emph{Ecoscience}, \bold{9} (2): 142-151.  
   
-Olano, J.M., Laskurain, N.A., Escudero, A. and De la Cruz, M. 2008. Why and where adult trees die in a secondary temperate forest? 
-The role of neighbourhood. \emph{Submitted}.
+Olano, J.M., Laskurain, N.A., Escudero, A. and De la Cruz, M. 2009. Why and where adult trees die in a secondary temperate forest? 
+The role of neighbourhood. \emph{Annals of Forest Science} DOI: 10.1051/forest:2008074 .
   
 Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook of the Finnish Statistical Society}, pp. 70-91. 
 
- \enc{Rey-Benayas, J.M., de la Montaña, E., Pérez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suárez-Seoane, S.}{Rey-Benayas, J.M., de la Montaña, E., Perez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suarez-Seoane, S.} 2008. 
+ \enc{Rey-Benayas, J.M., de la Montaña, E., Pérez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suárez-Seoane, S.}{Rey-Benayas, J.M., de la Montana, E., Perez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suarez-Seoane, S.} 2008. 
 Inter-annual dynamics and spatial congruence of a nocturnal bird assemblage inhabiting a Mediterranean agricultural mosaic. 
 \emph{Submitted}.
 
@@ -141,7 +141,7 @@ data(seedlings1)
 ###  i.e. test asociation/repulsion between  a "fixed" pattern (e.g. adult
 ###  H. squamatum plants) and a "variable" pattern (e.g. of surviving and 
 ###  dead seedlings), with 2.5\% and 97.5\% envelopes of 999 random 
-###  labellings (De la Cruz & al. in press).
+###  labellings (De la Cruz & al. 2008).
 
 data(Helianthemum)
 
@@ -161,7 +161,7 @@ plot(cosa$k02, sqrt(./pi)-r~r, col=c(3, 1, 3), lty=c(3, 1, 3), las=1,
 
 #############################################
 ###  Test differences of agregation and segregation between two patterns, 
-###  e.g. surviving and dying H. squamatum seedlings (De la Cruz & al. in press). 
+###  e.g. surviving and dying H. squamatum seedlings (De la Cruz & al. 2008). 
 
 data(Helianthemum)
 
@@ -231,7 +231,7 @@ plot(cosa12$k2k12, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
 
 #############################################
 ###  Simulate envelopes from the fitted values of a logistic model,
-###  as in Olano et al. (submited)
+###  as in Olano et al. (2009)
    
    
    data(quercusvm)

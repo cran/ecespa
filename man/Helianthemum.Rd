@@ -32,8 +32,8 @@ in \enc{Chinchón}{Chinchon} (near Madrid, Spain). These are part of the data col
  de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.} 
 \url{http://www.revistaecosistemas.net/pdfs/448.pdf}.
 
-De la Cruz, M., Romao, R.L., Escudero, A. & Maestre, F.T.  \emph{In press}. Where do seedlings go? A spatio-temporal analysis of
-early mortality in a semiarid specialist. \emph{Ecography}.
+De la Cruz, M., Romao, R.L.,  Escudero, A. and Maestre, F.T. 2008. Where do seedlings go? A spatio-temporal analysis of
+ early mortality in a semiarid specialist. \emph{Ecography},31 DOI: 10.1111/j.2008.0906-7590.05299 .
 
 Escudero, A., Romao, R.L., De la Cruz, M. & Maestre, F. 2005. Spatial pattern and neighbour effects on 
 \emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{J. Veg. Sci.}, \bold{16}: 383-390.

@@ -11,7 +11,8 @@
 \usage{
 Kmm(mippp, r = 1:10, nsim=NULL)
 
-\method{plot}{ecespa.kmm} (x, type="Kmm.n", q=0.025, 
+## S3 method for ploting objects of class 'ecespa.kmm':
+\method{plot}{ecespa.kmm}(x, type="Kmm.n", q=0.025, 
             xlime=NULL, ylime=NULL,  maine=NULL, add=FALSE, kmean=TRUE,
             ylabe=NULL, xlabe=NULL, lty=c(1,2,3), col=c(1,2,3), lwd=c(1,1,1),
              ...)
@@ -66,14 +67,14 @@ Kmm(mippp, r = 1:10, nsim=NULL)
 \item{kmmsim.n }{Matrix of simulated  normalized mark-weighted \eqn{K}-functions, or or \code{NULL} if none.}  
   
 }
-\references{ 
-\enc{De la Cruz, M. 2008. Métodos para analizar datos puntuales. In  \emph{Introducción al Análisis Espacial de Datos
-        en Ecología y Ciencias Ambientales: Métodos y Aplicaciones} (eds. Maestre, F.T., Escudero, A. and Bonet, A.).
-	Asociación Española de Ecología Terrestre, Universidad Rey Juan Carlos y Caja de Ahorros del Mediterráneo.
-	Madrid.}{De la Cruz, M. 2008. Metodos para analizar datos puntuales. In  \emph{Introduccion al Analisis Espacial de Datos
-        en Ecologia y Ciencias Ambientales: Metodos y Aplicaciones} (eds. Maestre, F.T., Escudero, A. and Bonet, A.).
-	Asociacion Española de Ecologia Terrestre, Universidad Rey Juan Carlos y Caja de Ahorros del Mediterraneo.
-	Madrid.}
+\references{
+De la Cruz, M. 2008. \enc{Métodos para analizar datos puntuales. 
+  En: \emph{Introducción al Análisis Espacial de Datos en Ecología y Ciencias Ambientales: Métodos y Aplicaciones } 
+  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 76-127. Asociación Española de Ecología Terrestre, Universidad Rey Juan Carlos
+  y Caja de Ahorros del Mediterráneo, Madrid.}{Metodos para analizar datos puntuales. 
+  En: \emph{Introduccion al Analisis Espacial de Datos en Ecologia y Ciencias Ambientales: Metodos y Aplicaciones } 
+  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 76-127. Asociacion Espanola de Ecologia Terrestre, Universidad Rey Juan Carlos
+  y Caja de Ahorros del Mediterraneo, Madrid.}
 
 
 Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook of the Finnish Statistical Society}, pp. 70-91. 

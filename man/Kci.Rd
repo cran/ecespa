@@ -16,6 +16,7 @@ Kci(mod1, mod2, correction="trans", nsim=99, ngrid=200, nrep=1e+05,
 Ki(mod1, correction="trans", nsim=99, ngrid=200, nrep=1e+05, r=NULL,
     spctype=1)
 
+## S3 ploth method for objects of class 'ecespa.kci':
 \method{plot}{ecespa.kci}(x, type=1, q=0.025, kmean=TRUE, add=FALSE, maine=NULL, 
        xlabe=NULL, ylabe=NULL, xlime=NULL, ylime=NULL, 
        lty=c(1,2,3), col=c(1,2,3), lwd=c(1,1,1), ...)
@@ -99,8 +100,7 @@ K1-K12,  K2-K21 and their envelopes.
 
 De la Cruz, M. and Escudero, A. 2008. Null models and tools for multivariate heterogeneous point patterns. \emph{Submitted}.
 
-De Soto, L., Olano, J.M., Rozas, V. and De la Cruz, M. 2008. Breakdown of traditional management drives community reorganization: A case study in Spanish juniper
-woodland. \emph{Submitted}.
+De Soto, L., Olano, J.M., Rozas, V. and De la Cruz, M. 2009. Release of \emph{Juniperus thurifera} woodlands from herbivore-mediated arrested succession in Spain. \emph{Applied Vegetation Science}. DOI: 10.1111/j.1654-109X.2009.01045.x .
 }
 
 \author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}}

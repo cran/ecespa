@@ -7,7 +7,7 @@
 \docType{data}
 \title{Artificial point data.}
 \description{
-  The three different point patterns in the figure 3.1 of De la Cruz (2007) 
+  The three different point patterns in the figure 3.1 of De la Cruz (2008) 
 }
 \usage{
 data(fig1)
@@ -22,12 +22,12 @@ data(fig3)
   }
 }
 \references{
-  De la Cruz, M. 2007. \enc{Métodos para analizar datos puntuales. 
+  De la Cruz, M. 2008. \enc{Métodos para analizar datos puntuales. 
   En: \emph{Introducción al Análisis Espacial de Datos en Ecología y Ciencias Ambientales: Métodos y Aplicaciones } 
-  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 000-000. Asociación Española de Ecología Terrestre, Universidad Rey Juan Carlos
+  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 76-127. Asociación Española de Ecología Terrestre, Universidad Rey Juan Carlos
   y Caja de Ahorros del Mediterráneo, Madrid.}{Metodos para analizar datos puntuales. 
   En: \emph{Introduccion al Analisis Espacial de Datos en Ecologia y Ciencias Ambientales: Metodos y Aplicaciones } 
-  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 000-000. Asociacion Española de Ecologia Terrestre, Universidad Rey Juan Carlos
+  (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 76-127. Asociacion Espanola de Ecologia Terrestre, Universidad Rey Juan Carlos
   y Caja de Ahorros del Mediterraneo, Madrid.}
 }
 \examples{
@@ -46,7 +46,7 @@ fig2.ppp <- haz.ppp(fig2)
 
 fig3.ppp <- haz.ppp(fig3)
 
-#Analyses as in Fig.3.2 of De la Cruz (2007). First, compute function K:
+#Analyses as in Fig.3.2 of De la Cruz (2008). First, compute function K:
 
 cosa1 <- Kest(fig1.ppp)
 
@@ -74,7 +74,7 @@ plot(cosa1,(./(pi*r^2))-1~r, col=c(1,0,0,1), lwd=c(2,2,2,2),
 	 lty=c(1,1,1,2), main="",
          ylab=expression((K(r)/pi*r^2)-1))
 
-## Analyses as in fig. 3.7 of De la Cruz (2007).
+## Analyses as in fig. 3.7 of De la Cruz (2008).
 ## First, compute function K and pointwise envelopes:
 
 cosa1.env <- envelope(fig1.ppp, Kest)
