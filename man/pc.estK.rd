@@ -67,7 +67,7 @@ data(gypsophylous)
 
 gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=99)
 
-plot(gyps.env, sqrt(./pi)-r~r)
+plot(gyps.env, sqrt(./pi)-r~r, legend=FALSE)
 
 ## Fit Poisson Cluster Process. The limits of integration 
 ## rmin and rmax are setup to 0 and 60, respectively. 
@@ -87,7 +87,7 @@ gyps.env.sim <- envelope(gypsophylous, Jest, nsim=99,
                     simulate=expression(sim.poissonc(gypsophylous,
 		    sigma=sqrt(cosa.pc$sigma2), rho=cosa.pc$rho)))
 
-plot(gyps.env.sim,  main="")
+plot(gyps.env.sim,  main="",legendpos="bottomleft")
 
 }
 }

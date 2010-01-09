@@ -62,7 +62,7 @@ Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook 
 }
 \author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}}
 
-\seealso{ \code{\link{getis}}, related to the point-sum measure, and  \code{\link[spatstat]{markstats}} for designing different implementations. }
+\seealso{ \code{\link{getis}}, related to the point-sum measure, and  \code{\link[spatstat]{markstat}} for designing different implementations. }
 \examples{
  \dontrun{
    

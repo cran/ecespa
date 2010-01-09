@@ -123,8 +123,8 @@ Poisson model can be easily fitted and passed to \code{Kci} with \code{\link[spa
     require(spatstat)
     data(urkiola)
 
-   #####################
-   ## univariate example
+  #####################
+   ## univariate case
 
    # get univariate pp
    I.ppp <- split.ppp(urkiola)$birch
@@ -137,7 +137,7 @@ Poisson model can be easily fitted and passed to \code{Kci} with \code{\link[spa
    
    I2.env <- envelope( I.ppp,Kinhom, lambda=I.lam, correction="trans", 
                               nsim=99, simulate=expression(rpoispp(I.lam)))
-   plot(I2.env, sqrt(./pi)-r~r) 
+   plot(I2.env, sqrt(./pi)-r~r, xlab="r (metres)", ylab= "L (r)", col=c(1,3,2,2),legend=FALSE) 
 
    # It seems that there is short scale clustering; let's fit an Inhomogeneous 
    # Poisson Cluster Process: 
@@ -148,17 +148,17 @@ Poisson model can be easily fitted and passed to \code{Kci} with \code{\link[spa
 
    Ipc.env <- Ki(I.ki, correction="trans", nsim=99, ngrid=200)
 
-   plot (Ipc.env)
+   plot (Ipc.env, xlab="r (metres)", ylab= "L (r)")
  
    #####################
-   ## bivariate example: test independence between birch and quercus in Urkiola
+   ## bivariate case: test independence between birch and quercus in Urkiola
 
    J.ppp <- split.ppp(urkiola)$oak
    
    # We want to simulate oak from a homogeneous Poisson model:
    J.ppm <- ppm(J.ppp, trend=~1, interaction=Poisson() )
    
-   IJ.env <- Kci (mod1=I.ki, nsim=99, mod2=J.ppm)
+   IJ.env <- Kci (mod1=I.ki, mod2=J.ppm, nsim=99)
    
    plot(IJ.env, type=12)
    

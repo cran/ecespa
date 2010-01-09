@@ -14,8 +14,8 @@ Some wrappers, functions and data sets for spatial point pattern analysis, with 
 \tabular{ll}{
 Package: \tab ecespa\cr
 Type: \tab Package\cr
-Version: \tab 1.1-1\cr
-Date: \tab 2008-11-16\cr
+Version: \tab 1.1-3\cr
+Date: \tab 2009-01-09\cr
 License: \tab GPL (>=2)\cr
 }
 }
@@ -34,8 +34,6 @@ De la Cruz, M. 2008. \enc{Métodos para analizar datos puntuales.
   (eds. Maestre, F. T., Escudero, A. y Bonet, A.), pp 76-127. Asociacion Espanola de Ecologia Terrestre, Universidad Rey Juan Carlos
   y Caja de Ahorros del Mediterraneo, Madrid.}
   
-De la Cruz, M. and Escudero, A. 2008. Null models and tools for multivariate heterogeneous point patterns. \emph{Submitted}.
-
 De la Cruz, M., Romao, R.L.,  Escudero, A. and Maestre, F.T. 2008. Where do seedlings go? A spatio-temporal analysis of
  early mortality in a semiarid specialist. \emph{Ecography},31 DOI: 10.1111/j.2008.0906-7590.05299 .
 
@@ -151,11 +149,11 @@ cosa <- K012(Helianthemum, fijo="adultHS", i="deadpl", j="survpl",
 
 plot(cosa$k01, sqrt(./pi)-r~r,  col=c(3, 1, 3), lty=c(3, 1, 3), las=1,
          ylab=expression(L[12]), xlim=c(0, 200), 
-	 main="adult HS vs. dead seedlings")
+	 main="adult HS vs. dead seedlings", legend=FALSE)
 
 plot(cosa$k02, sqrt(./pi)-r~r, col=c(3, 1, 3), lty=c(3, 1, 3), las=1, 
          ylab=expression(L[12]), xlim=c(0, 200),
- 	 main="adult HS vs. surviving seedlings")
+ 	 main="adult HS vs. surviving seedlings", legend=FALSE)
 
 
 
@@ -169,13 +167,13 @@ cosa12 <- K1K2(Helianthemum, j="deadpl", i="survpl", r=seq(0,200,le=201),
 		 nsim=999, nrank=1, correction="isotropic")
 
 plot(cosa12$k1k2, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
-         main= "survival- death")
+         main= "survival- death",ylab=expression(K[1]-K[2]), legend=FALSE)
 
 plot(cosa12$k1k12, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
-	 main="segregation of surviving seedlings")
+	 main="segregation of surviving seedlings",ylab=expression(K[1]-K[12]), legend=FALSE)
 
 plot(cosa12$k2k12, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
-         main= "segregation of dying seedlings")
+         main= "segregation of dying seedlings",ylab=expression(K[2]-K[12]), legend=FALSE)
 
 
 #############################################
@@ -199,7 +197,7 @@ plot(cosa12$k2k12, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
    
    I2.env <- envelope( I.ppp,Kinhom, lambda=I.lam, correction="trans", 
                               nsim=99, simulate=expression(rpoispp(I.lam)))
-   plot(I2.env, sqrt(./pi)-r~r) 
+   plot(I2.env, sqrt(./pi)-r~r, xlab="r (metres)", ylab= "L (r)", col=c(1,3,2,2),legend=FALSE) 
 
    # It seems that there is short scale clustering; let's fit an Inhomogeneous 
    # Poisson Cluster Process: 
@@ -210,7 +208,7 @@ plot(cosa12$k2k12, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
 
    Ipc.env <- Ki(I.ki, correction="trans", nsim=99, ngrid=200)
 
-   plot (Ipc.env)
+   plot (Ipc.env, xlab="r (metres)", ylab= "L (r)")
  
    #####################
    ## bivariate example: test independence between birch and quercus in Urkiola
@@ -306,7 +304,7 @@ data(gypsophylous)
 
 gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=99)
 
-plot(gyps.env, sqrt(./pi)-r~r)
+plot(gyps.env, sqrt(./pi)-r~r, ylab="L(r)", legend=FALSE)
 
 # Fit Poisson Cluster Process. The limits of integration 
 # rmin and rmax are setup to 0 and 60, respectively. 
@@ -326,36 +324,8 @@ gyps.env.sim <- envelope(gypsophylous, Jest, nsim=99,
                     simulate=expression(sim.poissonc(gypsophylous,
 		    sigma=sqrt(cosa.pc$sigma2), rho=cosa.pc$rho)))
 
-plot(gyps.env.sim,  main="")
+ plot(gyps.env.sim,  main="",legendpos="bottomleft")
 
-
-
-#############################################
-###  Fit the inhomogeneous Poisson cluster point process to a point pattern
-###  with the method of minimum contrast (Diggle 2003) as explained
-###  by Waagepetersen (2007).
-
-data(urkiola)
-
-# get univariate pp
-I.ppp <- split.ppp(urkiola)$birch
-
-#estimate inhomogeneous intensity function
-I.lam <- predict (ppm(I.ppp, ~polynom(x,y,2)), type="trend", ngrid=200)
-
-# Compute and plot envelopes to Kinhom, simulating from an Inhomogeneous Poisson Process:
-I2.env <- envelope( I.ppp,Kinhom, lambda=I.lam, correction="trans", 
-                           nsim=99, simulate=expression(rpoispp(I.lam)))
-plot(I2.env, sqrt(./pi)-r~r) 
-
-# It seems that there is short scale clustering; lets fit an IPCP: 
-
-I.ki <- ipc.estK(mippp=I.ppp, lambda=I.lam, correction="trans")
-
-# Compute and plot envelopes to Kinhom, simulating from the fitted IPCP:
-
-Ipc.env= Ki(I.ki, correction="trans", nsim=99, ngrid=200)
-plot (Ipc.env)
 
 
 

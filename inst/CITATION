@@ -5,6 +5,7 @@ citEntry(entry = "inbook",
          author = personList(
            as.person("Marcelino de la Cruz Rot") 
            ),
+	 chapter="3",  
 	 booktitle = "Introduccion al Analisis Espacial de Datos en Ecologia y Ciencias Ambientales: Metodos y Aplicaciones.",
          editor= personList(
            as.person(" Fernando T. Maestre"),

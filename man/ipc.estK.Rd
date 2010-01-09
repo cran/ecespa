@@ -92,7 +92,7 @@ data(gypsophylous)
 
 gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=99)
 
-plot(gyps.env, sqrt(./pi)-r~r)
+plot(gyps.env, sqrt(./pi)-r~r,, legend=FALSE)
 
 ## Fit Poisson Cluster Process. The limits of integration 
 ## rmin and rmax are setup to 0 and 60, respectively. 
@@ -106,39 +106,60 @@ plot(cosa.pc2, add=T, lwd=c(3,3))
 
 
 ## A kind of pointwise test of the gypsophylous pattern been a realisation
-## of the fitted model, simulating with sim.poissonc and using function J (Jest).
+## of the fitted model, simulating with rIPCP and using function J (Jest).
 
 
 gyps.env.sim2 <- envelope(gypsophylous, Jest, nsim=99,
                     simulate=expression(rIPCP(cosa.pc2)))
 
 
-plot(gyps.env.sim2,  main="")
+plot(gyps.env.sim2,  main="",legendpos="bottomleft")
 
 #####################
 ## Inhomogeneous example
 
 data(urkiola)
+   
+   #####################
+   ## univariate case
 
-# get univariate pp
-I.ppp <- split.ppp(urkiola)$birch
+   # get univariate pp
+   I.ppp <- split.ppp(urkiola)$birch
 
-#estimate inhomogeneous intensity function
-I.lam <- predict (ppm(I.ppp, ~polynom(x,y,2)), type="trend", ngrid=200)
+   # estimate inhomogeneous intensity function
+   I.lam <- predict (ppm(I.ppp, ~polynom(x,y,2)), type="trend", ngrid=200)
 
-# Compute and plot envelopes to Kinhom, simulating from an Inhomogeneous Poisson Process:
-I2.env <- envelope( I.ppp,Kinhom, lambda=I.lam, correction="trans", 
-                            nsim=99, simulate=expression(rpoispp(I.lam)))
-plot(I2.env, sqrt(./pi)-r~r) 
+   # Compute and plot envelopes to Kinhom, simulating from an Inhomogeneous
+   #  Poisson Process:
+   
+   I2.env <- envelope( I.ppp,Kinhom, lambda=I.lam, correction="trans", 
+                              nsim=99, simulate=expression(rpoispp(I.lam)))
+   plot(I2.env, sqrt(./pi)-r~r, xlab="r (metres)", ylab= "L (r)", col=c(1,3,2,2),legend=FALSE) 
 
-# It seems that there is short scale clustering; lets fit an IPCP: 
+   # It seems that there is short scale clustering; let's fit an Inhomogeneous 
+   # Poisson Cluster Process: 
 
-I.ki <- ipc.estK(mippp=I.ppp, lambda=I.lam, correction="trans")
+   I.ki <- ipc.estK(mippp=I.ppp, lambda=I.lam, correction="trans")
 
-# Compute and plot envelopes to Kinhom, simulating from the fitted IPCP:
+   # Compute and plot envelopes to Kinhom, simulating from the fitted IPCP:
 
-Ipc.env= Ki(I.ki, correction="trans", nsim=99, ngrid=200)
-plot (Ipc.env)
+   Ipc.env <- Ki(I.ki, correction="trans", nsim=99, ngrid=200)
+
+   plot (Ipc.env, xlab="r (metres)", ylab= "L (r)")
+ 
+   #####################
+   ## bivariate case: test independence between birch and quercus in Urkiola
+
+   J.ppp <- split.ppp(urkiola)$oak
+   
+   # We want to simulate oak from a homogeneous Poisson model:
+   J.ppm <- ppm(J.ppp, trend=~1, interaction=Poisson() )
+   
+   IJ.env <- Kci (mod1=I.ki, mod2=J.ppm, nsim=99)
+   
+   plot(IJ.env, type=12)
+   
+   plot(IJ.env, type=21)
 
 
 }
