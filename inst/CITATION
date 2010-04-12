@@ -14,13 +14,13 @@ citEntry(entry = "inbook",
            ),
          pages = "76--127",
          year  = "2008",
-	 publisher = "Asociación Espanola de Ecologia Terrestre, Universidad Rey Juan Carlos and Caja de Ahorros del Mediterraneo",
+	 publisher = "Asociacion Espanola de Ecologia Terrestre, Universidad Rey Juan Carlos and Caja de Ahorros del Mediterraneo",
 	 adress = "Madrid",
           textVersion = paste(
 		"De la Cruz, M. (2008).",
 		"Metodos para analizar datos puntuales.",
 		"In: Introduccion al Analisis Espacial de Datos en Ecologia y Ciencias Ambientales: Metodos y Aplicaciones (eds. Maestre, F. T., Escudero, A. y Bonet, A.),",
-		"pp 76-127. Asociación Espanola de Ecologia Terrestre, Universidad Rey Juan Carlos y Caja de Ahorros del Mediterraneo, Madrid.", 
+		"pp 76-127. Asociacion Espanola de Ecologia Terrestre, Universidad Rey Juan Carlos y Caja de Ahorros del Mediterraneo, Madrid.", 
 		"ISBN: 978-84-9849-308-5")
          )
 
