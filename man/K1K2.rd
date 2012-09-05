@@ -73,7 +73,7 @@ data(Helianthemum)
 cosa12 <- K1K2(Helianthemum, j="deadpl", i="survpl", r=seq(0,200,le=201),
 		 nsim=999, nrank=1, correction="isotropic")
 
-%%## plots of figure 9 in De la Cruz (2006)
+## plots of figure 9 in De la Cruz (2006)
 plot(cosa12$k1k2, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
          main= "survival- death")
 

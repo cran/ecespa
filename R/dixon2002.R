@@ -1,6 +1,7 @@
 `dixon2002` <-
 function (datos, nsim = 99) 
 {
+   datos <- as.matrix(datos) #19/03/2012: in response to nndistG changes in splancs [storage.mode(pts) <- "double"]
     info = mNNinfo(xy = datos[, 1:2], label = datos[, 3])
     datos.test = mNNtest(info)
     Ni = rowSums(info$ON)
