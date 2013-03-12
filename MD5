@@ -1,5 +1,5 @@
-ad239b59642e4611d347065199392dfb *DESCRIPTION
-559b4f5f259bfeaaea34d6eda645c2c9 *NAMESPACE
+1f7fde4c95f17d77c4f0a23ff478cc0a *DESCRIPTION
+8a1ac68d87fdb1e79ad2209b8a8ade63 *NAMESPACE
 014d1717218fbf4537896b3692150418 *R/K012.R
 828122f037328a90f0511801cbde372f *R/K1K2.R
 a0db7f600b75fbcd0ffee75caed17f6c *R/Kci.R
@@ -21,7 +21,7 @@ fbdb793a4d4b7b634fab09fabb95f8aa *R/mNNtest.R
 402b801717cfc160de0b5158ba51c2e9 *R/marksum.R
 0a8f8af45487bb9b9f349fb6c6682def *R/p2colasr.R
 e4694d820c674c681a42a15c2acfeb44 *R/pc.estK.R
-a07a0d33cd7bd63caa9e164b38847f07 *R/plot.ecespa.getis.R
+74d5df084b9bc1ca8c0edf5823a873e8 *R/plot.ecespa.getis.R
 2ac713a06ae418cf04772305f864bcdf *R/plot.ecespa.kci.R
 f8dee51ec922742f09c9050e3c16da09 *R/plot.ecespa.kmm.R
 777d95573955a7ab0121f04a2cc556f3 *R/plot.ecespa.marksum.R
@@ -63,7 +63,7 @@ d415fadfa43d90397332f2b4fe838567 *man/Kinhom.log.rd
 c81ba539cc7f756e4bdedf48b6eeb5ba *man/Kmulti.ls.Rd
 3ea9b25a33a8d4a14bd76d98898c01ab *man/dixon2002.Rd
 daa1896fbe5aa7ca5e674ce45b50ecd4 *man/fig1.Rd
-cde647d8bf0306963f9cda7cb738b5a8 *man/getis.rd
+65f355a48552d0700a622b08069678b1 *man/getis.rd
 8a6d772af80bd520a2c8ca6fb621c62d *man/gypsophylous.rd
 f9f1c241b323223d77eb090a784b466e *man/haz.ppp.Rd
 7fd2f6b6d8614cfe03f6fa1e97391605 *man/internal.Rd

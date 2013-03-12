@@ -6,7 +6,7 @@ export("dixon2002", "getis","haz.ppp", "ipc.estK","K1K2","K012","Kci","Kclust","
 
 # Import all packages listed as Imports or Depends
 # ToDo: "importFrom" only required functions 
-import(splancs, spatstat, fields, akima)
+import(splancs, spatstat)
 
 ## Registration of S3 methods
 import(stats)
