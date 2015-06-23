@@ -75,7 +75,9 @@ The \eqn{S[i]} and \eqn{S[ij]} statistics asume that the spatial nearest-neighbo
   }
 \references{ Dixon, P.M. 2002. Nearest-neighbor 
 contingency table analysis of spatial segregation for several species. \emph{Ecoscience}, \bold{9} (2): 142-151.  }
-\author{ Philip M. Dixon \url{http://www.public.iastate.edu/~pdixon/}. Marcelino de la Cruz \email{marcelino.delacruz@upm.es} wrote the wrapper code  for the \code{ecespa} version.}
+\author{ Philip M. Dixon \url{http://www.public.iastate.edu/~pdixon/}.
+
+Marcelino de la Cruz \email{marcelino.delacruz@upm.es} wrote the wrapper code  for the \code{ecespa} version.}
 \seealso{\code{\link{K012}} for another segregation test, based in the differences of univariate and bivariate \eqn{K}-functions.}
 \examples{
 \dontrun{

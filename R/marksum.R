@@ -1,7 +1,7 @@
 `marksum` <-
 function (mippp, R = 10, nx = 30, ny = 30) 
 {
-    require(spatstat)
+    
     dataname <- deparse (substitute(mippp))
     verifyclass(mippp, "ppp")
     if (is.marked(mippp) != TRUE) 

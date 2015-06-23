@@ -1,7 +1,7 @@
 `haz.ppp` <-
 function (W) 
 {
-    require(spatstat)
+    
     if (dim(W)[2] == 2) 
         pepe = ppp(x = W[, 1], y = W[, 2], xrange = range(W[, 
             1]), yrange = range(W[, 2]))

@@ -10,7 +10,8 @@
 marksum(mippp, R = 10, nx = 30, ny = 30)
 
 ## S3 method for ploting objects of class 'ecespa.marksum':
-\method{plot}{ecespa.marksum}(x, what="normalized",  contour=FALSE, grid=FALSE, ribbon=TRUE,col=NULL ,main=NULL,xlab="",ylab="",...)
+\method{plot}{ecespa.marksum}(x, what="normalized",  contour=FALSE, grid=FALSE,
+	ribbon=TRUE,col=NULL ,main=NULL,xlab="",ylab="",...)
 
 }
 \arguments{
@@ -70,14 +71,18 @@ Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook 
    
  seed.m <- marksum(seedlings1, R=25)
 
- plot(seed.m, what="marksum", sigma = 5)  # raw mark-sum measure; sigma is bandwith for smoothing
+ # raw mark-sum measure; sigma is bandwith for smoothing
+ plot(seed.m, what="marksum", sigma = 5)  
 
- plot(seed.m, what="pointsum", sigma = 5, col = tim.colors(30),) # point sum measure
+ # point sum measure
+ plot(seed.m, what="pointsum", sigma = 5) 
    
- plot(seed.m,  what="normalized", dimyx=200, contour=TRUE, sigma = 5) # normalized  mark-sum measure
+ # normalized  mark-sum measure
+ plot(seed.m,  what="normalized", dimyx=200, contour=TRUE, sigma = 5) 
 
-# the same with added grid
-plot(seed.m,  what="normalized", dimyx=200, contour=TRUE, sigma = 5, grid=TRUE) # normalized  mark-sum measure
+# the same with added grid and normalized  mark-sum measure
+plot(seed.m,  what="normalized", dimyx=200,
+      contour=TRUE, sigma = 5, grid=TRUE)
 
 }
 }  

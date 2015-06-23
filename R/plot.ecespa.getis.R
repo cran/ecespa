@@ -1,7 +1,7 @@
 plot.ecespa.getis <-
 function(x, type="k", dimyx=NULL, xy=NULL, eps=NULL, color=NULL, 
                     contour=TRUE , points=TRUE,...){
-   require (spatstat)
+   
    lambda <- x$ppp$n/area.owin(x$ppp$window)
    if (type=="k") zg <- x$klocalgrid
    if (type== "l") zg <- sqrt(x$klocalgrid/pi)

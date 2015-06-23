@@ -1,6 +1,6 @@
 getis <-function (mippp, nx = 30, ny = 30, R = 10) 
 {
-    require(spatstat)
+   
     dataname <- deparse(substitute(mippp))
     cosagrid <- gridcenters(mippp$window, nx = nx, ny = ny)
     cosa1 <- ppp(x = mippp$x[1], y = mippp$y[1], window = mippp$window, 

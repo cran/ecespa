@@ -1,5 +1,5 @@
 syrjala0 <- function(coords, var1, var2, nsim, R=FALSE){
-	require(spatstat)
+	
 	datanames <- c(deparse(substitute(var1)),  deparse(substitute(var2)))
 	
 	if(R!=FALSE) {

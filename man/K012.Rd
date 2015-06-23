@@ -61,7 +61,6 @@ Cuzick, J. and Edwards, R. 1990. Spatial clustering for inhomogeneous population
  \enc{De la Cruz, M. 2006. Introducción al análisis de datos mapeados o algunas de las (muchas) cosas
  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.}{De la Cruz, M. 2006. Introduccion al analisis 
  de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.} 
-\url{http://www.revistaecosistemas.net/pdfs/448.pdf}.
 
 De la Cruz, M., Romao, R.L., Escudero, A. & Maestre, F.T.  \emph{In press}. Where do seedlings go? A spatio-temporal analysis of
 early mortality in a semiarid specialist. \emph{Ecography}.

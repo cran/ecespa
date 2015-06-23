@@ -82,7 +82,7 @@ can be used to interpolate the local statistics (see examples).
   
   ponderosa.12 <- setmarks(ponderosa, ponderosa12$klocal)
   
-  Z <- smooth.ppp(ponderosa.12, sigma=5, dimyx=256)
+  Z <- Smooth(ponderosa.12, sigma=5, dimyx=256)
   
   plot(Z, col=topo.colors(128), main="smoothed neighbourhood density")
   
@@ -103,7 +103,7 @@ can be used to interpolate the local statistics (see examples).
    ## Plot the same, using smooth.ppp in spatstat
     X2 <- setmarks(X, X.g$klocal)
   
-    Z <- smooth.ppp(X2, sigma=0.05, dimxy=256)
+    Z <- Smooth(X2, sigma=0.05, dimxy=256)
   
     plot(Z, col=topo.colors(128), main="smoothed neighbourhood density")
   

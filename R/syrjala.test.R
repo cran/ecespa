@@ -1,9 +1,9 @@
-# incluye estandarización de las marcas de los patrones simulados
+# incluye estandarizacion de las marcas de los patrones simulados
 
 syrjala.test <- 
 function (ppp1, ppp2, nsim = 999) 
 {
-    require(spatstat)
+    
     datanames <- c(deparse(substitute(ppp1)), deparse(substitute(ppp2)))
     gammaf <- function(cosa.ppp) {
         gamma <- NULL
@@ -20,7 +20,7 @@ function (ppp1, ppp2, nsim = 999)
         return(psi)
     }
     psimean <- function(ppp1, ppp2) {
-        require(spatstat)
+        
         psi1 <- psi(ppp1, ppp2)
         psi2 <- psi(affine(ppp1, mat = diag(c(-1, -1))), affine(ppp2, 
             mat = diag(c(-1, -1))))

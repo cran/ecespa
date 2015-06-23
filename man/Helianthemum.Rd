@@ -30,7 +30,7 @@ in \enc{Chinchón}{Chinchon} (near Madrid, Spain). These are part of the data col
    \enc{De la Cruz, M. 2006. Introducción al análisis de datos mapeados o algunas de las (muchas) cosas
  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.}{De la Cruz, M. 2006. Introduccion al analisis 
  de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.} 
-\url{http://www.revistaecosistemas.net/pdfs/448.pdf}.
+
 
 De la Cruz, M., Romao, R.L.,  Escudero, A. and Maestre, F.T. 2008. Where do seedlings go? A spatio-temporal analysis of
  early mortality in a semiarid specialist. \emph{Ecography},31 DOI: 10.1111/j.2008.0906-7590.05299 .

@@ -1,7 +1,7 @@
 `Kmm` <-
 function (mippp, r = 1:10, nsim=NULL) 
 {
-    require(spatstat)
+    
     dataname <- deparse(substitute(mippp))
     mippp1 = setmarks(mippp, 1)
     lambda = mippp$n/area.owin(mippp$window)

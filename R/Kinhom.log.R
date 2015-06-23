@@ -2,7 +2,7 @@
 function(A, lambda=NULL, mod=NULL, lifemark="0", prob=NULL,
                                 r=NULL, nsim=99, correction="trans", ngrid=200){
   
-   require(spatstat)
+   
     dataname <- deparse(substitute(A))
     if (is.null(prob)) probname <- "null" else probname <- deparse(substitute(prob))
    Avivos <- unmark(A[A$marks == lifemark])
