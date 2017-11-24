@@ -103,7 +103,7 @@ De la Cruz, M. and Escudero, A. 2008. Null models and tools for multivariate het
 De Soto, L., Olano, J.M., Rozas, V. and De la Cruz, M. 2009. Release of \emph{Juniperus thurifera} woodlands from herbivore-mediated arrested succession in Spain. \emph{Applied Vegetation Science}. DOI: 10.1111/j.1654-109X.2009.01045.x .
 }
 
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}}
+\author{ Marcelino de la Cruz Rot }
 
 \section{Warning }{As this implementation involves the use of images as the means of evaluation of the (inhomogeneous) spatial trend, and a mask based on
 those images will be used as the point pattern window, the "Ripley's" or "isotropic" edge correction can not be employed.
@@ -118,10 +118,12 @@ Poisson model can be easily fitted and passed to \code{Kci} with \code{\link[spa
 }
 
 \examples{
- \dontrun{
- 
-    require(spatstat)
+  
+    
     data(urkiola)
+    
+    # set the number of simulations (nsim=199 or larger for real analyses)
+    nsim<- 5
 
   #####################
    ## univariate case
@@ -136,7 +138,7 @@ Poisson model can be easily fitted and passed to \code{Kci} with \code{\link[spa
    #  Poisson Process:
    
    I2.env <- envelope( I.ppp,Kinhom, lambda=I.lam, correction="trans", 
-                              nsim=99, simulate=expression(rpoispp(I.lam)))
+                              nsim=nsim, simulate=expression(rpoispp(I.lam)))
    plot(I2.env, sqrt(./pi)-r~r, xlab="r (metres)", ylab= "L (r)", col=c(1,3,2,2),legend=FALSE) 
 
    # It seems that there is short scale clustering; let's fit an Inhomogeneous 
@@ -146,10 +148,11 @@ Poisson model can be easily fitted and passed to \code{Kci} with \code{\link[spa
 
    # Compute and plot envelopes to Kinhom, simulating from the fitted IPCP:
 
-   Ipc.env <- Ki(I.ki, correction="trans", nsim=99, ngrid=200)
+   Ipc.env <- Ki(I.ki, correction="trans", nsim=nsim, ngrid=200)
 
    plot (Ipc.env, xlab="r (metres)", ylab= "L (r)")
  
+  \dontrun{
    #####################
    ## bivariate case: test independence between birch and quercus in Urkiola
 
@@ -158,13 +161,13 @@ Poisson model can be easily fitted and passed to \code{Kci} with \code{\link[spa
    # We want to simulate oak from a homogeneous Poisson model:
    J.ppm <- ppm(J.ppp, trend=~1, interaction=Poisson() )
    
-   IJ.env <- Kci (mod1=I.ki, mod2=J.ppm, nsim=99)
+   IJ.env <- Kci (mod1=I.ki, mod2=J.ppm, nsim=nsim)
    
    plot(IJ.env, type=12)
    
    plot(IJ.env, type=21)
- 
  }
+
 }
 
 \keyword{ spatial }

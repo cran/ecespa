@@ -66,18 +66,20 @@ can be used to interpolate the local statistics (see examples).
 }
 \references{ Getis, A. and Franklin, J. 1987. Second-order neighbourhood analysis of mapped point patterns. \emph{Ecology} \bold{68}: 473-477
  }
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es} }
+\author{ Marcelino de la Cruz Rot }
 \seealso{ \code{\link[spatstat]{localK}}, a different approach in \pkg{spatstat}. }
 \examples{
- \dontrun{
+
   ## Compare with fig. 5b of Getis & Franklin (1987: 476):
   
   data(ponderosa)
   
-  ponderosa12 <- getis(ponderosa, nx = 30, ny = 30, R = 12)
+  #ponderosa12 <- getis(ponderosa, nx = 30, ny = 30, R = 12)
+  ponderosa12 <- getis(ponderosa, nx = 20, ny = 20, R = 12)
   
   plot(ponderosa12, type = "l", dimyx=256)
-
+  
+\dontrun{
   ## Plot the same, using smooth.ppp in spatstat
   
   ponderosa.12 <- setmarks(ponderosa, ponderosa12$klocal)
@@ -90,6 +92,7 @@ can be used to interpolate the local statistics (see examples).
   
   points(ponderosa, pch=16, cex=0.5) 
   
+
   ## Example with irregular window:
   
   data(letterR)

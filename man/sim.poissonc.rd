@@ -31,7 +31,7 @@ that the position of each offspring relative to its parent follows a radially sy
 }
 \value{The simulated point pattern (an object of class "\code{ppp}"). }
 \references{ Diggle, P.J. 2003. \emph{Statistical analysis of spatial point patterns}. Arnold, London. }
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es} }
+\author{ Marcelino de la Cruz Rot }
 \note{ This function can use the results of  \code{\link{pc.estK}} to simulate point patterns from a fitted model.
 Be careful as the paramted returned by \code{\link{pc.estK}} is \eqn{sigma^2} while \code{sim.poissonc} takes 
 its square root, i.e. \eqn{sigma}.
@@ -43,14 +43,17 @@ This implementation simulates only point patterns within rectangular windows. Us
 \seealso{ \code{\link{rIPCP}} to simulate inhomogeneous PCP; \code{\link[spatstat]{rNeymanScott}} 
 and \code{\link[spatstat]{rThomas}} in \pkg{spatstat} }
 \examples{
-\dontrun{
+
 
 data(gypsophylous)
 
-## Estimate K function ("Kobs").
-gyps.env <- envelope(gypsophylous, Kest, correction="iso")
+# set the number of simulations (nsim=199 or larger for real analyses)
+nsim<- 39
 
-plot(gyps.env, sqrt(./pi)-r~r)
+## Estimate K function ("Kobs").
+gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=nsim)
+
+plot(gyps.env, sqrt(./pi)-r~r, legend=FALSE)
 
 ## Fit Poisson Cluster Process. The limits of integration 
 ## rmin and rmax are setup to 0 and 60, respectively. 
@@ -64,13 +67,13 @@ lines(gyps.env$r,sqrt(Kclust(gyps.env$r, cosa.pc$sigma2,cosa.pc$rho)/pi)-gyps.en
 ## A kind of pointwise test of the pattern gypsophilous been a realisation
 ## of the fitted model, simulating with sim.poissonc and using function J (Jest).
 
-gyps.env.sim <- envelope(gypsophylous, Jest, 
+gyps.env.sim <- envelope(gypsophylous, Jest,  nsim=nsim,
                     simulate=expression(sim.poissonc(gypsophylous,
 		    sigma=sqrt(cosa.pc$sigma2), rho=cosa.pc$rho)))
 
 plot(gyps.env.sim,  main="")
 
-}
+
 }
 \keyword{spatial }
 

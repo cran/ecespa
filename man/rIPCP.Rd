@@ -30,12 +30,12 @@ rIPCP(x, lambda = NULL, type = 1, lmax = NULL, win = owin(c(0, 1), c(0, 1)), ...
   A point pattern, with the format of the \code{\link[spatstat]{ppp}} objects of \code{spatstat}.
 }
 \references{ Waagepetersen, R. 2007. An estimating function approach to inference for inhomogeneous Neyman-Scott processes. \emph{Biometrics} 63:252-258. }
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es} }
+\author{ Marcelino de la Cruz Rot }
 
 \seealso{ \code{\link{sim.poissonc}} to simulate homogeneous PCP; \code{\link[spatstat]{rNeymanScott}} 
 and \code{\link[spatstat]{rThomas}} in \pkg{spatstat} are the basis of this function }
 \examples{
-  \dontrun{
+
   
     data(gypsophylous)
   
@@ -77,7 +77,7 @@ and \code{\link[spatstat]{rThomas}} in \pkg{spatstat} are the basis of this func
     pointpi <- rIPCP( I.ki)
    
     plot(pointpi)
- }
+ 
 
 }
 \keyword{ spatial }

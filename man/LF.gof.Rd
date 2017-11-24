@@ -51,6 +51,6 @@ Loosmore, N.B. and Ford, E.D. (2006) Statistical inference using the G or K poin
 
 }
 
-\author{ Marcelino de la Cruz \email{marcelino.delacruz@upm.es}}
+\author{ Marcelino de la Cruz }
 
 \keyword{ spatial }

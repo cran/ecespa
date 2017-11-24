@@ -53,19 +53,23 @@ contrast criterion are set up by the sequence of values of \eqn{r} and \eqn{Kobs
     \item{rho }{Parameter \eqn{rho}. }
 }
 \references{ Diggle, P. J. 2003. \emph{Statistical analysis of spatial point patterns}. Arnold, London. }
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}, inspired by some code of  Philip M. Dixon \url{http://www.public.iastate.edu/~pdixon/}}
+\author{ Marcelino de la Cruz Rot, inspired by some code of  Philip M. Dixon }
 
 \seealso{ \code{\link{ipc.estK}} for fitting the inhomogeneous Poisson cluster process; some functions in \pkg{spatstat}
 ( \code{\link[spatstat]{matclust.estK}} and \code{\link[spatstat]{lgcp.estK}}) fit other appropriate processes for clustered patterns;
 \code{\link[spatstat]{mincontrast}} performs a more general implementation of the method of mimimum contrast.}
 \examples{
-\dontrun{
+
 
 data(gypsophylous)
 
+
+# set the number of simulations (nsim=199 or larger for real analyses)
+nsim<- 19
+
 ## Estimate K function ("Kobs").
 
-gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=99)
+gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=nsim)
 
 plot(gyps.env, sqrt(./pi)-r~r, legend=FALSE)
 
@@ -83,13 +87,13 @@ lines(gyps.env$r,sqrt(Kclust(gyps.env$r, cosa.pc$sigma2,cosa.pc$rho)/pi)-gyps.en
 ## A kind of pointwise test of the gypsophylous pattern been a realisation
 ## of the fitted model, simulating with sim.poissonc and using function J (Jest).
 
-gyps.env.sim <- envelope(gypsophylous, Jest, nsim=99,
+gyps.env.sim <- envelope(gypsophylous, Jest, nsim=nsim,
                     simulate=expression(sim.poissonc(gypsophylous,
 		    sigma=sqrt(cosa.pc$sigma2), rho=cosa.pc$rho)))
 
 plot(gyps.env.sim,  main="",legendpos="bottomleft")
 
-}
+
 }
 
 \keyword{ spatial }

@@ -1,5 +1,5 @@
 c-------------------------------------------------------------------
-      subroutine syrjala(x,y,var1,var2,nd,nperm,cvm,ks)
+      subroutine syrjalala(x,y,var1,var2,nd,nperm,cvm,ks)
       parameter (epsilon = 1.0e-16)
 c
 c     A program to examine a proposed statistical test for a

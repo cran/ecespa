@@ -1,8 +1,8 @@
 ## compiled code
-useDynLib(ecespa)
+useDynLib(ecespa, .registration = TRUE)
 
 # Export regular functions
-export("dixon2002", "getis","haz.ppp", "ipc.estK","K1K2","K012","Kci","Kclust","Ki","Kinhom.log","Kmm","Kmulti.ls","marksum","pc.estK","rIPCP","sim.poissonc","syrjala0", "syrjala","syrjala.test")
+export("dixon2002", "getis","haz.ppp", "ipc.estK","K1K2","K012","Kci","Kclust","Ki","Kinhom.log","Kmm","Kmulti.ls","marksum","pc.estK","rIPCP","sim.poissonc","syrjala0", "syrjala","syrjala.test","LF.gof")
 
 # Import all packages listed as Imports or Depends
 # ToDo: "importFrom" only required functions 

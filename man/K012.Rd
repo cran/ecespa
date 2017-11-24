@@ -75,21 +75,28 @@ Lotwick, H. W. & Silverman, B. W. 1982. Methods for analysing spatial processes 
  \emph{Journal of the Royal Statistical Society} B \bold{44}: 406-413.
 
 }
-\author{Marcelino de la Cruz \email{marcelino.delacruz@upm.es} }
+\author{Marcelino de la Cruz }
 \seealso{\code{\link{dixon2002}} for another segregation test, based in the contingency table of counts of nearest neigbors in a marked point pattern.}
 \examples{
-\dontrun{
+
 
 data(Helianthemum)
 
+
+# To get 2.5\% and 97.5\% envelopes of 999 random labelings.
+## as in fig. 10 of De la Cruz (2006), change nsim= 999 and nrank=25
+nsim <-19
+nrank <-1
+
+
+
 ## Test asociation/repulsion between the fixed pattern of adult
 ## H. squamatum plants and the "variable" pattern of surviving and 
-## dead seedlings, with 2.5\% and 97.5\% envelopes of 999 random 
-## labellings.
-%%##fig. 10 of De la Cruz (2006), with 2.5\% and 97.5\% envelopes of 999 random labellings.
+## dead seedlings,
+
 
 cosa <- K012(Helianthemum, fijo="adultHS", i="deadpl", j="survpl",
-             r=seq(0,200,le=201), nsim=999, nrank=25, correction="isotropic")
+             r=seq(0,200,le=201), nsim=nsim, nrank=nrank, correction="isotropic")
 
 plot(cosa$k01, sqrt(./pi)-r~r,  col=c(3, 1, 3), lty=c(3, 1, 3), las=1,
          ylab=expression(L[12]), xlim=c(0, 200), 
@@ -98,6 +105,6 @@ plot(cosa$k01, sqrt(./pi)-r~r,  col=c(3, 1, 3), lty=c(3, 1, 3), las=1,
 plot(cosa$k02, sqrt(./pi)-r~r, col=c(3, 1, 3), lty=c(3, 1, 3), las=1, 
          ylab=expression(L[12]), xlim=c(0, 200),
  	 main="adult HS vs. surviving seedlings")
-}
+
 }
 \keyword{ spatial}

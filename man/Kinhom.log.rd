@@ -82,7 +82,7 @@ The role of neighbourhood. \emph{Annals of Forest Science} DOI: 10.1051/forest:2
 
 }
 
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}}
+\author{ Marcelino de la Cruz Rot }
 
 \section{Warning }{As this implementation involves the use of images as the means of evaluation of the (inhomogeneous) spatial trend, and a mask based on
 those images will be used as the point pattern window, the "Ripley's" or "isotropic" edge correction can not be employed.
@@ -91,11 +91,12 @@ those images will be used as the point pattern window, the "Ripley's" or "isotro
 
 
 \examples{
- \dontrun{
- 
-   require(spatstat)
+  
    
    data(quercusvm)
+   
+   # set the number of simulations (nsim=199 or larger for real analyses)
+   nsim<- 19
 
    # read fitted values from logistic model:
    
@@ -123,7 +124,7 @@ those images will be used as the point pattern window, the "Ripley's" or "isotro
    ################################ 
    ## Envelopes for an homogeneous point pattern:
    
-   cosap <- Kinhom.log(A=quercusvm, lifemark="0", nsim=99, prob=probquercus)
+   cosap <- Kinhom.log(A=quercusvm, lifemark="0",  prob=probquercus, nsim=nsim)
 
    plot(cosap)
 
@@ -140,18 +141,18 @@ those images will be used as the point pattern window, the "Ripley's" or "isotro
     ## Now use mod2 to estimate lambda for K.inhom:
     
     cosapm <- Kinhom.log(A=quercusvm, lifemark="0", prob=probquercus, 
-                                   nsim=99, mod=mod2)
+                                   nsim=nsim, mod=mod2)
 
    
    ################################ 
    ## An example of homogeneous random thinning:
       
-   cosa <- Kinhom.log(A=quercusvm, lifemark="0")
+   cosa <- Kinhom.log(A=quercusvm, lifemark="0", nsim=nsim)
    
    plot(cosa)
     
     
- }
+
 }
 
 \keyword{ spatial }

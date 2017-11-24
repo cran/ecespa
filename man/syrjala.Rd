@@ -92,21 +92,24 @@ Inter-annual dynamics and spatial congruence of a nocturnal bird assemblage inha
 
 Syrjala, S. E. 1996. A statistical test for a difference between the spatial distributions of two populations. \emph{Ecology} 77: 75-80.
 }
-\author{ Jose M. Blanco-Moreno \email{jmblanco@ub.edu} for the Fortran implementation of Syrjala's original QBasic function, Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es} for the R version, the wrapping functions and the documentation}
+\author{ Jose M. Blanco-Moreno \email{jmblanco@ub.edu} for the Fortran implementation of Syrjala's original QBasic function, Marcelino de la Cruz Rot for the R version, the wrapping functions and the documentation}
 
 \examples{
-\dontrun{
+
    
    data(syr1); data(syr2); data(syr3)
+   
+   coords <- data.frame(x=syr1$x, y=syr1$y); var1<- syr1$marks; var2<- syr2$marks
+   
+   (stest<-syrjala(coords, var1, var2, 9999))
+   plot(stest)
+   
+   
+   \dontrun{
    
    plot(syrjala.test(syr1, syr2, nsim=999)) 
    
    plot(syrjala.test(syr1, syr3, nsim=999)) 
-   
-   
-   coords <- data.frame(x=syr1$x, y=syr1$y); var1<- syr1$marks; var2<- syr2$marks
-   
-   syrjala(coords, var1, var2, 9999)
    
    syrjala0(coords, var1, var2, 9999)
    
@@ -119,7 +122,7 @@ Syrjala, S. E. 1996. A statistical test for a difference between the spatial dis
    syrjala(coords, var1, var2, 9999)
    
    
-   }
+}
 }
 
 \keyword{ spatial }

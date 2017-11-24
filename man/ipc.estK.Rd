@@ -75,24 +75,29 @@ This Poisson cluster process can be simulated with \code{\link{rIPCP}}.
  Diggle, P. J. 2003. \emph{Statistical analysis of spatial point patterns}. Arnold, London.
  
  Waagepetersen, R. P. 2007. An estimating function approach to inference for inhomogeneous Neymann-Scott processes. \emph{Biometrics} 63: 252-258. }
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}, inspired by some code of  Philip M. Dixon \url{http://www.public.iastate.edu/~pdixon/}}
+\author{ Marcelino de la Cruz Rot , inspired by some code of  Philip M. Dixon }
 
 \seealso{some functions in \pkg{spatstat}: \code{\link[spatstat]{mincontrast}} for a more general implementation of the method of mimimum contrast;
 \code{\link[spatstat]{matclust.estK}} and \code{\link[spatstat]{lgcp.estK}} fit other appropriate processes for clustered patterns.}
 
 \examples{
-\dontrun{
+
 
 #####################
 ## Same example as in pc.estK
 
 data(gypsophylous)
 
+# set the number of simulations (nsim=199 or larger for real analyses)
+# and resolution for lambda (ngrid=200  or larger for real analyses)
+nsim<- 19
+ngrid <- 50
+
 ## Estimate K function ("Kobs").
 
-gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=99)
+gyps.env <- envelope(gypsophylous, Kest, correction="iso", nsim=nsim)
 
-plot(gyps.env, sqrt(./pi)-r~r,, legend=FALSE)
+plot(gyps.env, sqrt(./pi)-r~r, legend=FALSE)
 
 ## Fit Poisson Cluster Process. The limits of integration 
 ## rmin and rmax are setup to 0 and 60, respectively. 
@@ -102,18 +107,20 @@ cosa.pc2 <- ipc.estK(gypsophylous, r = gyps.env$r[gyps.env$r<=60])
 ## Add fitted Kclust function to the plot.
 
 
-plot(cosa.pc2, add=T, lwd=c(3,3))
+plot(cosa.pc2, add=TRUE, lwd=c(3,3))
 
 
 ## A kind of pointwise test of the gypsophylous pattern been a realisation
 ## of the fitted model, simulating with rIPCP and using function J (Jest).
 
 
-gyps.env.sim2 <- envelope(gypsophylous, Jest, nsim=99,
+gyps.env.sim2 <- envelope(gypsophylous, Jest, nsim=nsim,
                     simulate=expression(rIPCP(cosa.pc2)))
 
 
 plot(gyps.env.sim2,  main="",legendpos="bottomleft")
+
+\dontrun{
 
 #####################
 ## Inhomogeneous example
@@ -127,13 +134,13 @@ data(urkiola)
    I.ppp <- split.ppp(urkiola)$birch
 
    # estimate inhomogeneous intensity function
-   I.lam <- predict (ppm(I.ppp, ~polynom(x,y,2)), type="trend", ngrid=200)
+   I.lam <- predict (ppm(I.ppp, ~polynom(x,y,2)), type="trend", ngrid=ngrid)
 
    # Compute and plot envelopes to Kinhom, simulating from an Inhomogeneous
    #  Poisson Process:
    
    I2.env <- envelope( I.ppp,Kinhom, lambda=I.lam, correction="trans", 
-                              nsim=99, simulate=expression(rpoispp(I.lam)))
+                              nsim=nsim, simulate=expression(rpoispp(I.lam)))
    plot(I2.env, sqrt(./pi)-r~r, xlab="r (metres)", ylab= "L (r)", col=c(1,3,2,2),legend=FALSE) 
 
    # It seems that there is short scale clustering; let's fit an Inhomogeneous 
@@ -143,7 +150,7 @@ data(urkiola)
 
    # Compute and plot envelopes to Kinhom, simulating from the fitted IPCP:
 
-   Ipc.env <- Ki(I.ki, correction="trans", nsim=99, ngrid=200)
+   Ipc.env <- Ki(I.ki, correction="trans", nsim=nsim, ngrid=ngrid)
 
    plot (Ipc.env, xlab="r (metres)", ylab= "L (r)")
  
@@ -155,14 +162,14 @@ data(urkiola)
    # We want to simulate oak from a homogeneous Poisson model:
    J.ppm <- ppm(J.ppp, trend=~1, interaction=Poisson() )
    
-   IJ.env <- Kci (mod1=I.ki, mod2=J.ppm, nsim=99)
+   IJ.env <- Kci (mod1=I.ki, mod2=J.ppm, nsim=nsim)
    
    plot(IJ.env, type=12)
    
    plot(IJ.env, type=21)
-
-
 }
+
+
 }
 
 \keyword{ spatial }

@@ -14,15 +14,15 @@ Some wrappers, functions and data sets for spatial point pattern analysis, with 
 \tabular{ll}{
 Package: \tab ecespa\cr
 Type: \tab Package\cr
-Version: \tab 1.1-3\cr
-Date: \tab 2009-01-09\cr
+Version: \tab 1.1-9\cr
+Date: \tab 2017-11-24\cr
 License: \tab GPL (>=2)\cr
 }
 }
 \author{
 Marcelino de la Cruz Rot, with contributions of Philip M. Dixon and Jose M. Blanco-Moreno and heavily borrowing  Baddeley's & Turner's \pkg{spatstat} code.
 
-Mantainer: Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}
+
 }
 
 \references{

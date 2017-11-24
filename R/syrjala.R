@@ -51,7 +51,7 @@ function(coords=NULL,var1=NULL,var2=NULL,nperm=999){
       }
    }
 #    subroutine syrjala(x,y,var1,var2,nd,nperm,cvm,ks)
-   ans <- .Fortran('syrjala',x=as.double(x),y=as.double(y),
+   ans <- .Fortran('syrjalala',x=as.double(x),y=as.double(y),
             var1=as.double(var1),var2=as.double(var2),
             nd=as.integer(nd),nperm=as.integer(nperm),
             cvm=double(nperm+1),ks=double(nperm+1),            

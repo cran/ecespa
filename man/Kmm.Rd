@@ -79,33 +79,36 @@ De la Cruz, M. 2008. \enc{Métodos para analizar datos puntuales.
 
 Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook of the Finnish Statistical Society}, pp. 70-91. 
 }
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}}
+\author{ Marcelino de la Cruz Rot }
 
 \note{This implementation estimates \eqn{Kmm(r)} without any correction of border effects, so it must be used with caution. However, as \eqn{K(r)} is 
 also estimed without correction it migth compensate the border effects on the normalized \eqn{Kmm}-function.
 }
 \seealso{\code{\link[spatstat]{markcorr}} }
 \examples{
-  \dontrun{
+
   ## Figure 3.10 of De la Cruz (2008):
+  # change r to r=1:100
+  
+   r = seq(1,100, by=5)
   
   data(seedlings1)
   
   data(seedlings2)
   
-  s1km <- Kmm(seedlings1, r=1:100)
+  s1km <- Kmm(seedlings1, r=r)
   
-  s2km <- Kmm(seedlings2, r=1:100)
+  s2km <- Kmm(seedlings2, r=r)
   
   plot(s1km, ylime=c(0.6,1.2), lwd=2, maine="", xlabe="r(cm)")
 
-  plot(s2km,  lwd=2, lty=2, add=T )
+  plot(s2km,  lwd=2, lty=2, add=TRUE )
 
   abline(h=1, lwd=2, lty=3)
   
   legend(x=60, y=1.2, legend=c("Hs_C1", "Hs_C2", "H0"),
 	 lty=c(1, 2, 3), lwd=c(3, 2, 2), bty="n")
- 
+\dontrun{
 ## A pointwise test of normalized Kmm == 1 for seedlings1:
 
    s1km.test <- Kmm(seedlings1, r=1:100, nsim=99)

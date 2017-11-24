@@ -65,15 +65,18 @@ Dixon, P. M. 2002. Ripley's K function. In \emph{The encyclopedia of environmetr
 (eds. El-Shaarawi, A.H. & Piergorsch, W.W.), pp. 1976-1803. John Wiley & Sons Ltd, NY.
 
 }
-\author{ Marcelino de la Cruz \email{marcelino.delacruz@upm.es} }
+\author{ Marcelino de la Cruz }
 \examples{
-\dontrun{
+
 data(Helianthemum)
 
-cosa12 <- K1K2(Helianthemum, j="deadpl", i="survpl", r=seq(0,200,le=201),
-		 nsim=999, nrank=1, correction="isotropic")
+# set the number of simulations (nsim=199 or larger for real analyses)
+nsim<- 19
 
-## plots of figure 9 in De la Cruz (2006)
+cosa12 <- K1K2(Helianthemum, j="deadpl", i="survpl", r=seq(0,200,le=201),
+		 nsim=nsim, correction="isotropic")
+
+## plots of figure 9 in De la Cruz (2006) (they where made with nsim=999)
 plot(cosa12$k1k2, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
          main= "survival- death")
 
@@ -81,8 +84,8 @@ plot(cosa12$k1k12, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
 	 main="segregation of surviving seedlings")
 
 plot(cosa12$k2k12, lty=c(2, 1, 2), col=c(2, 1, 2), xlim=c(0, 200),
-         main= "segregation of dying seedlings")
-}
+         main= "segregation of dying seedlings", legend=FALSE)
+
 }
 
 \keyword{ spatial}

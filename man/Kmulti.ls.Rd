@@ -33,11 +33,11 @@ Kmulti.ls(X, I, J, r = NULL, corre = "isotropic")
 
 \references{ Lotwick,H.W. & Silverman, B. W. 1982. Methods for analysing spatial processes of several types of points. 
  \emph{Journal of the Royal Statistical Society} B \bold{44}: 406-413. }
-\author{ Marcelino de la Cruz. \email{marcelino.delacruz@upm.es} }
+\author{ Marcelino de la Cruz }
 \note{ \code{Kmulti.ls} is a wrapper for a convenient use of the \code{\link[spatstat]{Kmulti}} function of \pkg{spatstat}. 
 Please refer to its help page for additional documentation.}
 \examples{
-\dontrun{
+
 data(amacrine)
 
 plot(Kmulti.ls(amacrine, I=amacrine$marks=="on", J=amacrine$marks=="off", 
@@ -50,6 +50,6 @@ plot(Kmulti(amacrine, I=amacrine$marks=="on", J=amacrine$marks=="off"),
 
 plot(Kmulti(amacrine, J=amacrine$marks=="on", I=amacrine$marks=="off"),
       sqrt(iso/pi)-r~r, add=TRUE, col=4)
-}
+
 }
 \keyword{ spatial }

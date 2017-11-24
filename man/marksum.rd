@@ -61,11 +61,11 @@ marksum(mippp, R = 10, nx = 30, ny = 30)
 \references{ 
 Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook of the Finnish Statistical Society}, pp. 70-91. 
 }
-\author{ Marcelino de la Cruz Rot \email{marcelino.delacruz@upm.es}}
+\author{ Marcelino de la Cruz Rot }
 
 \seealso{ \code{\link{getis}}, related to the point-sum measure, and  \code{\link[spatstat]{markstat}} for designing different implementations. }
 \examples{
- \dontrun{
+
    
  data(seedlings1)
    
@@ -84,6 +84,6 @@ Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook 
 plot(seed.m,  what="normalized", dimyx=200,
       contour=TRUE, sigma = 5, grid=TRUE)
 
-}
+
 }  
 \keyword{ spatial }
