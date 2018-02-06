@@ -30,7 +30,7 @@ marksum(mippp, R = 10, nx = 30, ny = 30)
     \item{xlab}{Text or expression to add as a label to axis x.}
     \item{ylab}{Text or expression to add as a label to axis y.}
         
-    \item{...}{Additional parameters to \code{\link[spatstat]{smooth.ppp}}, \code{\link[spatstat]{density.ppp}} or \code{\link[spatstat]{as.mask}}, to control 
+    \item{...}{Additional parameters to \code{\link[spatstat]{Smooth.ppp}}, \code{\link[spatstat]{density.ppp}} or \code{\link[spatstat]{as.mask}}, to control 
                   the  parameters of the smoothing kernel, pixel resolution, etc. }
 }
 \details{

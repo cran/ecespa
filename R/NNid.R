@@ -1,12 +1,17 @@
+# changed in ecespa 1.1.10. to remove dependency of splancs
+# using nnwhich() instead of nndistG()$neighs
+# It was
+# `NNid` <-function (xy, splancs = TRUE)
+
 `NNid` <-
-function (xy, splancs = TRUE) 
+function (xy) 
 {
-    if (splancs) {
-        nndistG(xy)$neighs
-    }
-##    else {
-##        temp <- #####find.####neighbor(xy, k = 2)
-##        as.vector(temp[temp[, 1] != temp[, 2], 2])
-##    }
+    nnwhich(xy)
+    # removred in ecespa 1.1.10 from here
+ #   if (splancs) {
+ #       nndistG(xy)$neighs
+ #   }
+ #    to here
+
 }
 

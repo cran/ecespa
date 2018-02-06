@@ -61,7 +61,7 @@ functions in empty or sparse areas. The S3 method  \code{plot.ecespa.getis}  plo
   \code{plot.ecespa.getis} plots an interpolated map of the selected local statistics
 }
 \note{
-As \code{plot.ecespa.getis} interpolates over rectangular grid of points, it is not apropriate to map irregular windows. In those cases, \code{\link[spatstat]{smooth.ppp}} of \code{spatstat}
+As \code{plot.ecespa.getis} interpolates over rectangular grid of points, it is not apropriate to map irregular windows. In those cases, \code{\link[spatstat]{Smooth.ppp}} of \code{spatstat}
 can be used to interpolate the local statistics (see examples).
 }
 \references{ Getis, A. and Franklin, J. 1987. Second-order neighbourhood analysis of mapped point patterns. \emph{Ecology} \bold{68}: 473-477
@@ -80,7 +80,7 @@ can be used to interpolate the local statistics (see examples).
   plot(ponderosa12, type = "l", dimyx=256)
   
 \dontrun{
-  ## Plot the same, using smooth.ppp in spatstat
+  ## Plot the same, using Smooth.ppp in spatstat
   
   ponderosa.12 <- setmarks(ponderosa, ponderosa12$klocal)
   
@@ -103,7 +103,7 @@ can be used to interpolate the local statistics (see examples).
   
   plot(X.g,dimyx=c(200,100))
   
-   ## Plot the same, using smooth.ppp in spatstat
+   ## Plot the same, using Smooth.ppp in spatstat
     X2 <- setmarks(X, X.g$klocal)
   
     Z <- Smooth(X2, sigma=0.05, dimxy=256)

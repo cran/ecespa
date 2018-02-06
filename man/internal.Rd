@@ -11,9 +11,9 @@
 check(x, v, l1, l2)
 ginv(m)
 mNNinfo2(n, R, Q)
-mNNinfo(xy, label, nnid = NULL, splancs = TRUE)
+mNNinfo(xy, label, nnid = NULL)
 mNNtest(info, obsN = NULL)
-NNid(xy, splancs = TRUE)
+NNid(xy)
 }
 \details{
 These fucntions are called by \code{\link{dixon2002}} and are usually not to be called by the user.

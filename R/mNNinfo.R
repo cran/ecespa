@@ -1,8 +1,13 @@
+# changed in ecespa 1.1.10. to remove dependency of splancs
+# it was; `mNNinfo` <- function (xy, label, nnid = NULL, splancs = TRUE) 
+
 `mNNinfo` <-
-function (xy, label, nnid = NULL, splancs = TRUE) 
+function (xy, label, nnid = NULL) 
 {
     if (is.null(nnid)) {
-        nnid <- NNid(xy, splancs)
+        # changed in ecespa 1.1.10. to remove dependency of splancs
+        #nnid <- NNid(xy, splancs)
+	nnid <- NNid(xy)
     }
     n <- table(label)
     N <- sum(n)
