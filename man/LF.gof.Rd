@@ -47,7 +47,7 @@ Diggle, P. J. (1986). Displaced amacrine cells in the retina of a rabbit : analy
 
 Diggle, P.J. (2003) \emph{Statistical analysis of spatial point patterns}, Second edition. Arnold. 
 
-Loosmore, N.B. and Ford, E.D. (2006) Statistical inference using the G or K point pattern spatial statistics. \emph{Ecology} 87, 1925-1931. 
+Loosmore, N.B. and Ford, E.D. (2006) Statistical inference using the G or K point pattern spatial statistics. \emph{Ecology} 87, 1925-1931. \url{ https://doi.org/10.1890/0012-9658(2006)87[1925:SIUTGO]2.0.CO;2}.
 
 }
 

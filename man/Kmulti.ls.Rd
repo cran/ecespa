@@ -31,8 +31,11 @@ Kmulti.ls(X, I, J, r = NULL, corre = "isotropic")
 
 }
 
-\references{ Lotwick,H.W. & Silverman, B. W. 1982. Methods for analysing spatial processes of several types of points. 
- \emph{Journal of the Royal Statistical Society} B \bold{44}: 406-413. }
+\references{ 
+Lotwick,H.W. & Silverman, B. W. 1982. Methods for analysing spatial processes of several types of points. 
+ \emph{Journal of the Royal Statistical Society} B,  44: 406-413. \url{https://doi.org/10.1111/j.2517-6161.1982.tb01221.x}.
+ 
+ }
 \author{ Marcelino de la Cruz }
 \note{ \code{Kmulti.ls} is a wrapper for a convenient use of the \code{\link[spatstat]{Kmulti}} function of \pkg{spatstat}. 
 Please refer to its help page for additional documentation.}

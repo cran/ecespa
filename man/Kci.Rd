@@ -100,7 +100,7 @@ K1-K12,  K2-K21 and their envelopes.
 
 De la Cruz, M. and Escudero, A. 2008. Null models and tools for multivariate heterogeneous point patterns. \emph{Submitted}.
 
-De Soto, L., Olano, J.M., Rozas, V. and De la Cruz, M. 2009. Release of \emph{Juniperus thurifera} woodlands from herbivore-mediated arrested succession in Spain. \emph{Applied Vegetation Science}. DOI: 10.1111/j.1654-109X.2009.01045.x .
+De Soto, L., Olano, J.M., Rozas, V. and De la Cruz, M. 2009. Release of \emph{Juniperus thurifera} woodlands from herbivore-mediated arrested succession in Spain. \emph{Applied Vegetation Science},  13: 1525. \url{http://dx.doi.org/10.1111/j.1654-109X.2009.01045.x}
 }
 
 \author{ Marcelino de la Cruz Rot }

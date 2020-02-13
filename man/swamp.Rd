@@ -35,14 +35,14 @@ examples of a marked spatial point pattern.
 }
 
 \references{
-  Dixon, P.M. 2002. Nearest-neighbor contingency table analysis of spatial 
-segregation for several species. \emph{Ecoscience}, \bold{9}(2): 142-151.
+Dixon, P.M. 2002. Nearest-neighbor contingency table analysis of spatial segregation for several species.
+  \emph{Ecoscience}, 9 (2): 142-151. \url{https://doi.org/10.1080/11956860.2002.11682700}. 
 
 Good, , B. J. & Whipple, S.A. 1982. Tree spatial patterns: South Carolina bottomland
-and swamp forest. \emph{Bulletin of the Torrey Botanical Club}, \bold{109}: 529-536.
+and swamp forest. \emph{Bulletin of the Torrey Botanical Club}, 109: 529-536.
 
 Jones et al. 1994. Tree population dynamics in seven South Carolina mixed-species
-forests. \emph{Bulletin of the Torrey Botanical Club}, \bold{121}:360-368.
+forests. \emph{Bulletin of the Torrey Botanical Club}, 121:360-368.
 
 }
 \examples{

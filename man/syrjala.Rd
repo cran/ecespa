@@ -86,11 +86,11 @@ They cannot be analysed with the usual tools employed for marked point patterns.
 
 \references{ 
 
-\enc{Rey-Benayas, J.M., de la Montaña, E., Pérez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suárez-Seoane, S.}{Rey-Benayas, J.M., de la Montana, E., Perez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suarez-Seoane, S.} 2008. 
-Inter-annual dynamics and spatial congruence of a nocturnal bird assemblage inhabiting a Mediterranean agricultural mosaic. 
-\emph{Submitted}.
+ \enc{Rey-Benayas, J.M., de la Montaña, E., Pérez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suárez-Seoane, S.}{Rey-Benayas, J.M., de la Montana, E., Perez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suarez-Seoane, S.} 2010. 
+Inter-annual dynamics and spatial congruence of a nocturnal bird assemblage inhabiting a Mediterranean agricultural mosaic. \emph{Ardeola},57(2): 303-320.
 
-Syrjala, S. E. 1996. A statistical test for a difference between the spatial distributions of two populations. \emph{Ecology} 77: 75-80.
+Syrjala, S. E. 1996. A statistical test for a difference between the spatial distributions of two populations. \emph{Ecology} 77: 75-80. \url{ https://doi.org/10.2307/2265656}.
+
 }
 \author{ Jose M. Blanco-Moreno \email{jmblanco@ub.edu} for the Fortran implementation of Syrjala's original QBasic function, Marcelino de la Cruz Rot for the R version, the wrapping functions and the documentation}
 

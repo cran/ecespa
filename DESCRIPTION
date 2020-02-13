@@ -1,8 +1,8 @@
 Package: ecespa
 Type: Package
 Title: Functions for Spatial Point Pattern Analysis
-Version: 1.1-10
-Date: 2018-02-06
+Version: 1.1-11
+Date: 2020-02-12
 Author: Marcelino de la Cruz Rot, with contributions of Philip M. Dixon and Jose M. Blanco-Moreno
 Maintainer: Marcelino de la Cruz Rot <marcelino.delacruz@urjc.es>
 Depends: spatstat
@@ -11,6 +11,6 @@ License: GPL (>= 2)
 LazyLoad: yes
 LazyData: yes
 NeedsCompilation: yes
-Packaged: 2018-02-06 20:02:41 UTC; marcelino
+Packaged: 2020-02-12 20:12:47 UTC; marcelino
 Repository: CRAN
-Date/Publication: 2018-02-06 22:50:04 UTC
+Date/Publication: 2020-02-13 10:10:02 UTC

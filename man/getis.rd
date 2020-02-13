@@ -64,7 +64,8 @@ functions in empty or sparse areas. The S3 method  \code{plot.ecespa.getis}  plo
 As \code{plot.ecespa.getis} interpolates over rectangular grid of points, it is not apropriate to map irregular windows. In those cases, \code{\link[spatstat]{Smooth.ppp}} of \code{spatstat}
 can be used to interpolate the local statistics (see examples).
 }
-\references{ Getis, A. and Franklin, J. 1987. Second-order neighbourhood analysis of mapped point patterns. \emph{Ecology} \bold{68}: 473-477
+\references{ 
+Getis, A. and Franklin, J. 1987. Second-order neighbourhood analysis of mapped point patterns. \emph{Ecology} 68: 473-477. \url{https://doi.org/10.2307/1938452}.
  }
 \author{ Marcelino de la Cruz Rot }
 \seealso{ \code{\link[spatstat]{localK}}, a different approach in \pkg{spatstat}. }

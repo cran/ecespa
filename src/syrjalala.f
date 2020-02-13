@@ -50,6 +50,10 @@ c     History:
 c     2008-10-27  The random number generator of the permuteobs 
 c     subroutine has been changed to the R uniform random number
 c     generator.
+c     2020-02-10 Erased unused variable 'timearray' . 
+c     2020-02-10 Defined double precision variable 'halfvalue" 
+c     to avoid conflicts  in comparisons with 'u' (previously 'u' 
+c     was compared to 0.5, that implicitly was defined as 'real')
 c
       integer  nd,nperm
       double precision  x(nd),y(nd),var1(nd),var2(nd),
@@ -168,19 +172,19 @@ c
 c
 c     calculate statistics from "upper left"
 c
-   	do i = 1,nd
+      do i = 1,nd
          yy(i) = -1.0*yy(i)
       end do
-   	call dcumulative (xx,yy,pvar1,pvar2,nd,tssdiff,tmaxdiff);
+      call dcumulative (xx,yy,pvar1,pvar2,nd,tssdiff,tmaxdiff);
       cvm = cvm + tssdiff/dble(4.0)
       ks = ks + tmaxdiff/dble(4.0)
 c
 c     calculate statistics from "upper right"
 c
-   	do i = 1,nd
+      do i = 1,nd
          xx(i) = -1.0*xx(i)
       end do
-   	call dcumulative (xx,yy,pvar1,pvar2,nd,tssdiff,tmaxdiff);
+      call dcumulative (xx,yy,pvar1,pvar2,nd,tssdiff,tmaxdiff);
       cvm = cvm + tssdiff/dble(4.0)
       ks = ks + tmaxdiff/dble(4.0)
 c
@@ -189,7 +193,7 @@ c
       do i = 1,nd
          yy(i) = -1.0*yy(i)
       end do
-   	call dcumulative (xx,yy,pvar1,pvar2,nd,tssdiff,tmaxdiff);
+      call dcumulative (xx,yy,pvar1,pvar2,nd,tssdiff,tmaxdiff);
       cvm = cvm + tssdiff/dble(4.0)
       ks = ks + tmaxdiff/dble(4.0)
 c      
@@ -211,19 +215,21 @@ c     number generator through a C wrapper function (in wrp.c)
       integer  nd                                                 
       double precision  pvar1(nd),pvar2(nd),ppvar1(nd),ppvar2(nd) 
                                                                   
-      integer i,timearray(3)                                      
+      integer i                                   
 c      double precision rand,u,sumppvar1                           
-      double precision u,sumppvar1                           
+c      double precision u,sumppvar1                           
+      double precision sumppvar1
+      REAL u
                                                                   
-      sumppvar1 = 0.0                                             
+      sumppvar1 = 0.0  
 c                                                                 
 c     inter-change values between variables if rand > 0.5         
 c                                                                 
       call rndstart()
-      do i = 1,nd                                                 
-         u = unifrnd()
+      do i = 1,nd 
+          u = unifrnd()
 c         u = rand(0)
-         if (u.gt.0.5) then                                       
+         if (u.gt.0.5) then
             ppvar1(i) = pvar2(i)                                  
             ppvar2(i) = pvar1(i)                                  
          else                                                     

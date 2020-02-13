@@ -27,7 +27,7 @@ A rank of 1 means that the minimum and maximum simulated values will be used. }
 }
 \details{
   This test was developped to answer some questions about the spatial pattern of survival and
-mortality of seedlings and its relationships with adult plants in a plant community (De la Cruz \emph{et al. In press} ).
+mortality of seedlings and its relationships with adult plants in a plant community (De la Cruz \emph{et al. } 2008).
  In order to evaluate the spatial structures of seedlings fates (survive or die), the null hypothesis of random labelling (Cuzick & Edwards 1990, Dixon 2002)
  would be the appropriate one. This kind of pattern is the result of two hierarchical processes: a first one that generates the pattern of points (seedlings)
  and other that assign "labels" (i.e. "die", "survive") to the points. On the other hand,  to analyze the relationships between the spatial pattern of 
@@ -62,9 +62,10 @@ Cuzick, J. and Edwards, R. 1990. Spatial clustering for inhomogeneous population
  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.}{De la Cruz, M. 2006. Introduccion al analisis 
  de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas. \emph{Ecosistemas} 15 (3): 19-39.} 
 
-De la Cruz, M., Romao, R.L., Escudero, A. & Maestre, F.T.  \emph{In press}. Where do seedlings go? A spatio-temporal analysis of
-early mortality in a semiarid specialist. \emph{Ecography}.
-
+De la Cruz, M., Romao, R.L.,  Escudero, A. and Maestre, F.T. 2008. Where do seedlings go? A spatio-temporal analysis of
+ early mortality in a semiarid specialist. \emph{Ecography}, 31(6): 720-730. \url{http://dx.doi.org/10.1111/j.0906-7590.2008.05299.x}.
+ 
+ 
 Dixon, P. M. 2002. Ripley's K function. In \emph{The encyclopedia of environmetrics} 
 (eds. El-Shaarawi, A.H. & Piergorsch, W.W.), pp. 1976-1803. John Wiley & Sons Ltd, NY.
 

@@ -1,5 +1,5 @@
 #include <R_ext/RS.h>
-#include <stdlib.h> // for NULL
+#include <stdlib.h> 
 #include <R_ext/Rdynload.h>
 
 /* .Fortran calls */

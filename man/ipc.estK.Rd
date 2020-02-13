@@ -74,7 +74,9 @@ This Poisson cluster process can be simulated with \code{\link{rIPCP}}.
 \references{
  Diggle, P. J. 2003. \emph{Statistical analysis of spatial point patterns}. Arnold, London.
  
- Waagepetersen, R. P. 2007. An estimating function approach to inference for inhomogeneous Neymann-Scott processes. \emph{Biometrics} 63: 252-258. }
+Waagepetersen, R. P. 2007. An estimating function approach to inference for inhomogeneous Neymann-Scott processes. \emph{Biometrics} 63: 252-258. \url{https://doi.org/10.1111/j.1541-0420.2006.00667.x}.
+ 
+ }
 \author{ Marcelino de la Cruz Rot , inspired by some code of  Philip M. Dixon }
 
 \seealso{some functions in \pkg{spatstat}: \code{\link[spatstat]{mincontrast}} for a more general implementation of the method of mimimum contrast;

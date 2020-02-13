@@ -73,10 +73,13 @@ sum to the overall \eqn{C}.
 The \eqn{S[i]} and \eqn{S[ij]} statistics asume that the spatial nearest-neighbor process is stationary, at least to second order, 
   i.e., have the same sign in every part of the entire plot. A biologically heterogeneous process will violate this asumption.
   }
-\references{ Dixon, P.M. 2002. Nearest-neighbor 
-contingency table analysis of spatial segregation for several species. \emph{Ecoscience}, \bold{9} (2): 142-151.  }
-\author{ Philip M. Dixon .
-Marcelino de la Cruz  wrote the wrapper code  for the \code{ecespa} version.}
+\references{ 
+Dixon, P.M. 2002. Nearest-neighbor contingency table analysis of spatial segregation for several species.
+  \emph{Ecoscience}, 9 (2): 142-151. \url{https://doi.org/10.1080/11956860.2002.11682700}. 
+}
+\author{ 
+Philip M. Dixon . Marcelino de la Cruz  wrote the wrapper code  for the \code{ecespa} version.
+}
 \seealso{
 \code{\link{K012}} for another segregation test, based in the differences of univariate and bivariate \eqn{K}-functions. A faster version of this function, with code implemented in FORTRAN it is available in function \code{\link[dixon]{dixon}} in \pkg{dixon}.
 }

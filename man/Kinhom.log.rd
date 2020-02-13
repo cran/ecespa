@@ -72,12 +72,12 @@ This is accomplished by  the S3 ploth method \code{\link{plot.ecespa.kci}}; it w
 }
 \references{
 
-Batista, J.L.F. and Maguire, D.A. 1998. Modelling the spatial structure of tropical forests. \emph{For. Ecol. Manag.} 110: 293-314. 
+Batista, J.L.F. and Maguire, D.A. 1998. Modelling the spatial structure of tropical forests. \emph{For. Ecol. Manag.},  110: 293-314. 
 
-Kenkel, N.C. 1988. Pattern of self-thinning in Jack Pine: testing the random mortality hypothesis. \emph{Ecology} 69: 1017-1024.
+Kenkel, N.C. 1988. Pattern of self-thinning in Jack Pine: testing the random mortality hypothesis. \emph{Ecology},  69: 1017-1024.
  
 Olano, J.M., Laskurain, N.A., Escudero, A. and De la Cruz, M. 2009. Why and where adult trees die in a secondary temperate forest? 
-The role of neighbourhood. \emph{Annals of Forest Science} DOI: 10.1051/forest:2008074 .
+The role of neighbourhood. \emph{Annals of Forest Science}, 66: 105. \url{http://dx.doi.org/10.1051/forest:2008074}.
 
 
 }

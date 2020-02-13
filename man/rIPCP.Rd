@@ -29,7 +29,10 @@ rIPCP(x, lambda = NULL, type = 1, lmax = NULL, win = owin(c(0, 1), c(0, 1)), ...
 \value{
   A point pattern, with the format of the \code{\link[spatstat]{ppp}} objects of \code{spatstat}.
 }
-\references{ Waagepetersen, R. 2007. An estimating function approach to inference for inhomogeneous Neyman-Scott processes. \emph{Biometrics} 63:252-258. }
+\references{ 
+Waagepetersen, R. P. 2007. An estimating function approach to inference for inhomogeneous Neymann-Scott processes. \emph{Biometrics} 63: 252-258. \url{https://doi.org/10.1111/j.1541-0420.2006.00667.x}.
+
+}
 \author{ Marcelino de la Cruz Rot }
 
 \seealso{ \code{\link{sim.poissonc}} to simulate homogeneous PCP; \code{\link[spatstat]{rNeymanScott}} 
