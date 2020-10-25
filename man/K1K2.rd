@@ -28,9 +28,9 @@ A rank of 1 means that the minimum and maximum simulated values will be used. }
  The indiscriminate use of the raw bivariate functions (mainly the \eqn{K} or the \eqn{L}-bivariate functions) in ecological studies for testing the association/ repulsion
  between different point patterns waste some of the most interesting properties of the \eqn{K}-function. One of them is that under the random labelling hypothesis
  every individual pattern would be a random thinning of the corresponding bivariate pattern and therefore \eqn{Ki(r)=Kj(r)= Kij(r)=pi*r^2} (Diggle 2003). 
-Dixon (2002) sugested that some differences of these functions could provide provide interesting ecological information. For example, \eqn{Ki(r)-Kj(r)},
+Dixon (2002) sugested that some differences of these functions could provide provide interesting ecological information. For example, \eqn{D(r)= Ki(r)-Kj(r)},
  has an expected value of 0 for all \eqn{r} distances under random labelling and evaluates the differences in the intensity of aggregation of the two point patterns
- (e.g., in the example bellow, the pattern of drought and herbivory deaths). Other relevant function is \eqn{Ki(r)-Kij(r}) and the complementary \eqn{Kj(r)-Kij(r})
+ (e.g., in the example bellow, the pattern of drought and herbivory deaths). Other relevant function is \eqn{D(r) = Ki(r)-Kij(r}) and the complementary \eqn{D(r)= Kj(r)-Kij(r})
  which evaluate the degree of segregation of every individual pattern, i.e. if every point of the pattern is more -or less- surrounded by other points of the same type
  than would be expected under the random labelling hypothesis. \code{K1K2} uses \eqn{K^*ij(r)}, the combined estimator of Lotwick and Silverman (a weigthed mean of 
  \eqn{Kij(r)}  and \eqn{Kji(r)}) as computed by \code{\link{Kmulti.ls}}.
@@ -43,10 +43,10 @@ Dixon (2002) sugested that some differences of these functions could provide pro
   \item{}{}
     \item{}{}
 \item{}{Each of the above elements is a \code{\link[spatstat]{fv.object}}, essentially a \code{data.frame} with the following items:}
-\item{r }{The values of the argument r at which the functions kave been estimated.}
+\item{r }{The values of the argument r at which the functions have been estimated.}
 \item{hi }{Upper envelope of simulations.}
-\item{lo }{Lower envelope of simulations.}
-together with the observed difference in each case (respectively \code{K1-K2}, \code{K1-K12} and \code{K2-K12}). 
+\item{D }{The respective difference function \eqn{D(r)}, i.e., respectively, \eqn{Ki(r)-Kj(r)},  \eqn{Ki(r)-K^*ij(r)} or \eqn{Kj(r)-K^*ij(r)}.}
+\item{lo }{Lower envelope of simulations.} 
 }
 
 \references{ 
