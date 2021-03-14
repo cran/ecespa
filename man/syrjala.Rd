@@ -29,9 +29,9 @@ syrjala.test(ppp1, ppp2, nsim = 999)
   \item{nperm}{Number of permutations.}
   \item{nsim}{Number of permutations.}
   \item{R}{Logical. Should be computed using R approach?}
-   \item{ppp1}{ A marked point pattern, with the \code{\link[spatstat]{ppp}} format of spatstat, 
+   \item{ppp1}{ A marked point pattern, with the \code{\link[spatstat.geom]{ppp}} format of spatstat, 
                       representing the values of some parameter measured on the corresponding sampling locations. }
-  \item{ppp2}{ A marked point pattern, with the \code{\link[spatstat]{ppp}} format of spatstat, 
+  \item{ppp2}{ A marked point pattern, with the \code{\link[spatstat.geom]{ppp}} format of spatstat, 
                      representing the values of some other parameter measured on the same locations than \code{ppp1}. }
   \item{x}{An object of class '\code{syrjala.test}' or  '\code{ecespa.syrjala}' resulting from \code{syrjala} or \code{syrjala.test}, respectively.}
   \item{coline}{color for drawing the statistic's line in the plot.}
@@ -81,7 +81,7 @@ y-coordinate and abundance).
 This function has been employed to compute Syrjala's test in Rey-Benayas et al. (2008).
 }
 \section{Warning }{The test requires both populations being sampled in exactly the same sampling locations. 
-Althoug this implementation employs \code{\link[spatstat]{ppp}}'s as the supporting data format, this kind of data are \bold{not} spatial point patterns.
+Althoug this implementation employs \code{\link[spatstat.geom]{ppp}}'s as the supporting data format, this kind of data are \bold{not} spatial point patterns.
 They cannot be analysed with the usual tools employed for marked point patterns.} 
 
 \references{ 
@@ -89,7 +89,7 @@ They cannot be analysed with the usual tools employed for marked point patterns.
  \enc{Rey-Benayas, J.M., de la Montaña, E., Pérez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suárez-Seoane, S.}{Rey-Benayas, J.M., de la Montana, E., Perez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suarez-Seoane, S.} 2010. 
 Inter-annual dynamics and spatial congruence of a nocturnal bird assemblage inhabiting a Mediterranean agricultural mosaic. \emph{Ardeola},57(2): 303-320.
 
-Syrjala, S. E. 1996. A statistical test for a difference between the spatial distributions of two populations. \emph{Ecology} 77: 75-80. \url{ https://doi.org/10.2307/2265656}.
+Syrjala, S. E. 1996. A statistical test for a difference between the spatial distributions of two populations. \emph{Ecology} 77: 75-80. \doi{10.2307/2265656}.
 
 }
 \author{ Jose M. Blanco-Moreno \email{jmblanco@ub.edu} for the Fortran implementation of Syrjala's original QBasic function, Marcelino de la Cruz Rot for the R version, the wrapping functions and the documentation}

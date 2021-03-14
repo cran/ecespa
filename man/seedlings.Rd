@@ -14,7 +14,7 @@ data(seedlings1)
 data(seedlings2)
 }
 \format{
-  \code{seedlings1} and \code{seedlings2} are objects of class "ppp" representing the point pattern of seedling locations marked by their heights. See \code{\link[spatstat]{ppp.object}} 
+  \code{seedlings1} and \code{seedlings2} are objects of class "ppp" representing the point pattern of seedling locations marked by their heights. See \code{\link[spatstat.geom]{ppp.object}} 
   for details of the format. }
 
 \source{
@@ -29,7 +29,7 @@ De la Cruz, M. 2006. \enc{Introducción al análisis de datos mapeados o algunas d
 
   
 Escudero, A., Romao, R.L., De la Cruz, M. & Maestre, F. 2005. Spatial pattern and neighbour effects on 
-\emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{Journal of  Vegetation  Science},  16: 383-390. \url{https://doi.org/10.1111/j.1654-1103.2005.tb02377.x}.
+\emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{Journal of  Vegetation  Science},  16: 383-390. \doi{10.1111/j.1654-1103.2005.tb02377.x}.
 
 }
 \examples{

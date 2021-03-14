@@ -20,6 +20,8 @@ function (datos, nsim = 99)
     pZr = NULL
     pCr = NULL
     pCir = NULL
+    # To store observed and simulated counts in the contingency table; simulated N (SN) 14.02.2021
+    SN = as.vector(t(ON))
     if (nsim > 0) {
         for (i in 1:nsim) {
             print(i)
@@ -30,8 +32,12 @@ function (datos, nsim = 99)
             Z = cbind(Z, datos.test$Z)
             C = c(C, datos.test$C[1])
             Ci = cbind(Ci, datos.test$Ci[, 1])
+            # To store observed and simulated counts in the contingency table; simulated N (SN) 14.02.2021
+            SN <-cbind(SN, as.vector(t(info$ON)))
         }
-        pZr = apply(Z, 1, p2colasr)
+        #pZr = apply(Z, 1, p2colasr)
+	# pValue on the observed counts
+	pNr = apply(SN, 1, p2colasr) # change the name from pZr to pNr 14.02.2021
         pCr = 1 - rank(C)[1]/(length(C))
         pCir = apply(Ci, 1, function(x) 1 - rank(x)[1]/(length(x)))
     }
@@ -45,9 +51,9 @@ function (datos, nsim = 99)
         4))
     names(tableZ) = c("From", "To", "    Obs.Count", "    Exp. Count", 
         "S ", "Z ", "  p-val.as")
-    if (length(pZr) != 0) {
-        tableZ = cbind(tableZ, round(pZr, 4))
-        names(tableZ) = c(names(tableZ)[-8], "  p-val.rnd")
+    if (length(pNr) != 0) {
+        tableZ = cbind(tableZ, round(pNr, 4))
+        names(tableZ) = c(names(tableZ)[-8], "  p-val.Nobs")
     }
     rownames(tableZ) = NULL
     k = length(unique(datos[, 3]))
@@ -63,7 +69,7 @@ function (datos, nsim = 99)
         names(tablaC) = c(names(tablaC)[-4], "  P.rand")
     }
     return(list(ON = ON, EN = EN, Z = Z.obs, S = S, pZas = pZas, 
-        pZr = pZr, C = C.obs, Ci = Ci.obs, pCas = pCas, pCias = pCias, 
+        pNr = pNr, C = C.obs, Ci = Ci.obs, pCas = pCas, pCias = pCias, 
         pCr = pCr, pCir = pCir, tablaZ = tableZ, tablaC = tablaC))
 }
 

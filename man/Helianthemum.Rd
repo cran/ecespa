@@ -12,7 +12,7 @@ in \enc{Chinchón}{Chinchon} (near Madrid, Spain). These are part of the data col
 }
 \usage{data(Helianthemum)}
 \format{
- An object of class "ppp"  of \code{spatstat} representing the point pattern of plants locations marked by their type. See \code{\link[spatstat]{ppp.object}} 
+ An object of class "ppp"  of \code{spatstat} representing the point pattern of plants locations marked by their type. See \code{\link[spatstat.geom]{ppp.object}} 
   for details of the format.The dataset has 866 points with the following levels: 
   \describe{
     \item{adultHS}{adult \emph{H. squamatum} plants}
@@ -30,10 +30,10 @@ in \enc{Chinchón}{Chinchon} (near Madrid, Spain). These are part of the data col
   De la Cruz, M. 2006. \enc{Introducción al análisis de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas}{Introduccion al analisis  de datos mapeados o algunas de las (muchas) cosas  que puedo hacer si tengo coordenadas}. \emph{Ecosistemas}  15 (3): 19-39. 
 
 De la Cruz, M., Romao, R.L.,  Escudero, A. and Maestre, F.T. 2008. Where do seedlings go? A spatio-temporal analysis of
- early mortality in a semiarid specialist. \emph{Ecography},31(6): 720-730. \url{http://dx.doi.org/10.1111/j.0906-7590.2008.05299.x}.
+ early mortality in a semiarid specialist. \emph{Ecography},31(6): 720-730. \doi{10.1111/j.0906-7590.2008.05299.x}.
 
 Escudero, A., Romao, R.L., De la Cruz, M. & Maestre, F. 2005. Spatial pattern and neighbour effects on 
-\emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{Journal of  Vegetation  Science},  16: 383-390. \url{https://doi.org/10.1111/j.1654-1103.2005.tb02377.x}.
+\emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{Journal of  Vegetation  Science},  16: 383-390. \doi{10.1111/j.1654-1103.2005.tb02377.x}.
 }
 \examples{
 data(Helianthemum)

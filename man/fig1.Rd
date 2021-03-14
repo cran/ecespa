@@ -91,10 +91,10 @@ plot(cosa1.env,sqrt(./pi)-r~r, lwd=c(1,1,2,2),
 
 ## Add simultaneous envelopes of Ripley (+-1.68 *sqrt(A)/N):
 
-abline(h=1.68*sqrt(fig1.ppp$w$area)/fig1.ppp$n, 
+abline(h=1.68*sqrt(area.owin(fig1.ppp$window))/fig1.ppp$n, 
          lty=2, lwd=2)
 
-abline(h=-1.68*sqrt(fig1.ppp$w$area)/fig1.ppp$n, 
+abline(h=-1.68*sqrt(area.owin(fig1.ppp$window))/fig1.ppp$n, 
          lty=2, lwd=2)
 
 ## Plot function L with pointwise envelopes:
@@ -105,10 +105,10 @@ plot(cosa2.env,sqrt(./pi)-r~r, lwd=c(1,1,2,2),
 
 ## Add simultaneous envelopes of Ripley:
 
-abline(h=1.68*sqrt(fig2.ppp$w$area)/fig2.ppp$n, 
+abline(h=1.68*sqrt(area.owin(fig2.ppp$window))/fig2.ppp$n, 
          lty=2, lwd=2)
 
-abline(h=-1.68*sqrt(fig2.ppp$w$area)/fig2.ppp$n, 
+abline(h=-1.68*sqrt(area.owin(fig2.ppp$window))/fig2.ppp$n, 
          lty=2, lwd=2)
 
 ## Plot function L with pointwise envelopes:
@@ -119,10 +119,10 @@ plot(cosa3.env,sqrt(./pi)-r~r, lwd=c(1,1,2,2),
 
 ## Add simultaneous envelopes of Ripley:
 
-abline(h=1.68*sqrt(fig3.ppp$w$area)/fig3.ppp$n, 
+abline(h=1.68*sqrt(area.owin(fig3.ppp$window))/fig3.ppp$n, 
          lty=2, lwd=2)
 
-abline(h=-1.68*sqrt(fig3.ppp$w$area)/fig3.ppp$n, 
+abline(h=-1.68*sqrt(area.owin(fig3.ppp$window))/fig3.ppp$n, 
          lty=2, lwd=2)
 }
 }

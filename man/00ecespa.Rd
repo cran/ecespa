@@ -28,37 +28,37 @@ De la Cruz, M. 2008. \enc{Métodos para analizar datos puntuales.
   y Caja de Ahorros del Mediterraneo, Madrid.}
   
 De la Cruz, M., Romao, R.L.,  Escudero, A. and Maestre, F.T. 2008. Where do seedlings go? A spatio-temporal analysis of
- early mortality in a semiarid specialist. \emph{Ecography}, 31(6): 720-730. \url{http://dx.doi.org/10.1111/j.0906-7590.2008.05299.x}.
+ early mortality in a semiarid specialist. \emph{Ecography}, 31(6): 720-730. \doi{10.1111/j.0906-7590.2008.05299.x}.
 
 Diggle, P. J. 2003. \emph{Statistical analysis of spatial point patterns}. Arnold, London. 
 
 Dixon, P.M. 2002. Nearest-neighbor contingency table analysis of spatial segregation for several species.
-  \emph{Ecoscience}, 9 (2): 142-151. \url{https://doi.org/10.1080/11956860.2002.11682700}. 
+  \emph{Ecoscience}, 9 (2): 142-151. \doi{10.1080/11956860.2002.11682700}. 
   
 Dixon, P. M. 2002. Ripley's K function. In \emph{The encyclopedia of environmetrics} 
 (eds. El-Shaarawi, A.H. & Piergorsch, W.W.), pp. 1976-1803. John Wiley & Sons Ltd, NY.
   
 Escudero, A., Romao, R.L., De la Cruz, M. & Maestre, F. 2005. Spatial pattern and neighbour effects on 
-\emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{Journal of  Vegetation  Science},  16: 383-390. \url{https://doi.org/10.1111/j.1654-1103.2005.tb02377.x}.
+\emph{Helianthemum squamatum} seedlings in a Mediterranean gypsum community. \emph{Journal of  Vegetation  Science},  16: 383-390. \doi{10.1111/j.1654-1103.2005.tb02377.x}.
 
-Getis, A. and Franklin, J. 1987. Second-order neighbourhood analysis of mapped point patterns. \emph{Ecology} 68: 473-477. \url{https://doi.org/10.2307/1938452}.
+Getis, A. and Franklin, J. 1987. Second-order neighbourhood analysis of mapped point patterns. \emph{Ecology} 68: 473-477. \doi{10.2307/1938452}.
 
-Loosmore, N.B. and Ford, E.D. (2006) Statistical inference using the G or K point pattern spatial statistics. \emph{Ecology} 87, 1925-1931. \url{ https://doi.org/10.1890/0012-9658(2006)87[1925:SIUTGO]2.0.CO;2}.
+Loosmore, N.B. and Ford, E.D. (2006) Statistical inference using the G or K point pattern spatial statistics. \emph{Ecology} 87, 1925-1931. \doi{10.1890/0012-9658(2006)87[1925:SIUTGO]2.0.CO;2}.
 
 Lotwick,H.W. & Silverman, B. W. 1982. Methods for analysing spatial processes of several types of points. 
- \emph{Journal of the Royal Statistical Society} B,  44: 406-413. \url{https://doi.org/10.1111/j.2517-6161.1982.tb01221.x}.
+ \emph{Journal of the Royal Statistical Society} B,  44: 406-413. \doi{10.1111/j.2517-6161.1982.tb01221.x}.
   
 Olano, J.M., Laskurain, N.A., Escudero, A. and De la Cruz, M. 2009. Why and where adult trees die in a secondary temperate forest? 
-The role of neighbourhood. \emph{Annals of Forest Science}, 66: 105. \url{http://dx.doi.org/10.1051/forest:2008074}.
+The role of neighbourhood. \emph{Annals of Forest Science}, 66: 105. \doi{10.1051/forest:2008074}.
   
 Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook of the Finnish Statistical Society}, pp. 70-91. 
 
  \enc{Rey-Benayas, J.M., de la Montaña, E., Pérez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suárez-Seoane, S.}{Rey-Benayas, J.M., de la Montana, E., Perez-Camacho, L., de la Cruz, M., Moreno, D., Parejo, J.L. and Suarez-Seoane, S.} 2010. 
 Inter-annual dynamics and spatial congruence of a nocturnal bird assemblage inhabiting a Mediterranean agricultural mosaic. \emph{Ardeola},57(2): 303-320.
 
-Syrjala, S. E. 1996. A statistical test for a difference between the spatial distributions of two populations. \emph{Ecology} 77: 75-80. \url{ https://doi.org/10.2307/2265656}.
+Syrjala, S. E. 1996. A statistical test for a difference between the spatial distributions of two populations. \emph{Ecology} 77: 75-80. \doi{10.2307/2265656}.
 
-Waagepetersen, R. P. 2007. An estimating function approach to inference for inhomogeneous Neymann-Scott processes. \emph{Biometrics} 63: 252-258. \url{https://doi.org/10.1111/j.1541-0420.2006.00667.x}.
+Waagepetersen, R. P. 2007. An estimating function approach to inference for inhomogeneous Neymann-Scott processes. \emph{Biometrics} 63: 252-258. \doi{10.1111/j.1541-0420.2006.00667.x}.
 
 }
 
