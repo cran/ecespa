@@ -31,7 +31,7 @@ Ki(mod1, correction="trans", nsim=99, ngrid=200, nrep=1e+05, r=NULL,
   \item{nsim}{ Number of simulated point patterns to be generated when computing the envelopes. }
   \item{ngrid}{ Dimensions (ngrid by ngrid) of a rectangular grid of locations where \code{\link[spatstat.core]{predict.ppm}} 
   would evaluate the spatial trend of the fitted models. }
-  \item{nrep}{ Total number of steps (proposals) of Metropolis-Hastings algorithm that should be run by \code{\link[spatstat.core]{rmh}}
+  \item{nrep}{ Total number of steps (proposals) of Metropolis-Hastings algorithm that should be run by \code{\link[spatstat.random]{rmh}}
   to simulate models of class \code{ppm}.}
   \item{r}{ Numeric vector. The values of the argument \eqn{r} at which the \eqn{K(r)} functions  should be evaluated. }
   \item{simu}{ A character item indicating if both models will be simulated for the computation of the envelopes (\code{simu = "both"}) or 

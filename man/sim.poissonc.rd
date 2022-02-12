@@ -40,8 +40,8 @@ its square root, i.e. \eqn{sigma}.
 This implementation simulates only point patterns within rectangular windows. Use  \code{\link{ipc.estK}} to fit and 
  \code{\link{rIPCP}} (or the \code{spatstat} functions) to simulate point patterns within irregular windows.
 }
-\seealso{ \code{\link{rIPCP}} to simulate inhomogeneous PCP; \code{\link[spatstat.core]{rNeymanScott}} 
-and \code{\link[spatstat.core]{rThomas}} in \pkg{spatstat} }
+\seealso{ \code{\link{rIPCP}} to simulate inhomogeneous PCP; \code{\link[spatstat.random]{rNeymanScott}} 
+and \code{\link[spatstat.random]{rThomas}} in \pkg{spatstat} }
 \examples{
 
 

@@ -9,7 +9,9 @@ export("dixon2002", "getis","haz.ppp", "ipc.estK", "K1K2", "K012", "Kci", "Kclus
 
 importFrom("grDevices", "topo.colors")
 
-importFrom("spatstat.core", "Kcross", "Kcross.inhom", "Kest", "Kinhom", "Kmulti", "Poisson", "Smooth", "ppm", "predict.ppm", "rThomas", "rmh", "rthin")
+importFrom("spatstat.core", "Kcross", "Kcross.inhom", "Kest", "Kinhom", "Kmulti", "Poisson", "Smooth", "ppm", "predict.ppm")
+
+importFrom("spatstat.random", "rThomas", "rmh", "rthin")
 
 importFrom("spatstat.geom", "%mark%", "affine", "area.owin", "as.im", "as.owin", "eval.im", "gridcenters", "im", "interp.im", "is.im", "is.marked", "marks", "markstat", "nnwhich", "owin", "ppp", "progressreport", "rescue.rectangle", "setmarks", "superimpose", "unmark", "verifyclass")
 
