@@ -45,10 +45,10 @@ one can not apply the usual technique of toroidal shifting one pattern over the 
   \item{k01 }{Bivariate K function of the fixed point pattern and the I variable type, with simulation envelopes}
   \item{k02 }{Bivariate K function of the fixed point pattern and the J variable type, with simulation envelopes}
 
- \item{ }{}
+% 
 
- \item{ }{Each of the above elements is a \code{\link[spatstat.core]{fv.object}}, essentially a \code{data.frame} with the following items:
-}
+Each of the above elements is a \code{\link[spatstat.core]{fv.object}}, essentially a \code{data.frame} with the following items:
+% 
 \item{r }{the values of the argument r at which the functions kave been estimated}
 \item{hi }{upper envelope of simulations}
 \item{lo }{lower envelope of simulations}

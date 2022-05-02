@@ -1,4 +1,4 @@
-c477bcd47eaa5d94de86f37d053a94ff *DESCRIPTION
+9ff4fa71e08a5c993ccba65f1136fa52 *DESCRIPTION
 b2dd201a41d560e9044db2e81a0cf942 *NAMESPACE
 014d1717218fbf4537896b3692150418 *R/K012.R
 fc51d26934e88b8679dd910e31a5b9b4 *R/K1K2.R
@@ -41,7 +41,7 @@ d67d7e52f87e0ae891c9210960f58c23 *R/rIPCP.R
 3241d16da5a8019ba70cbaa32f19c418 *R/syrjala.R
 19592b50ed17d5f668df378d931ddff2 *R/syrjala.test.R
 e5430e08da64b2665429c5094c3401e3 *R/syrjala0.R
-e6c4f9ba574b1278d70338462f241e70 *build/partial.rdb
+f01682ffd9d5582c0d3b8a226f3c2b16 *build/partial.rdb
 4abc8a6ad148986de7ab931961a8d763 *data/Helianthemum.rda
 42bebd454b054104e2bfcd57521b17a0 *data/fig1.rda
 ec29284f9e74bb131bcfe82768bfc32a *data/fig2.rda
@@ -57,8 +57,8 @@ a9a304a46c6e2729977ff9b9a8b4854e *data/syr3.rda
 f1ac2bf4e4b796fc10baa1c3406d6088 *inst/CITATION
 23beac255d959ee4eb27530daeeafd8e *man/00ecespa.Rd
 bd57aa634d004cb77c654483ed7533b0 *man/Helianthemum.Rd
-562d53ab5dff869ae685923f2fa2f607 *man/K012.Rd
-6dee915fcb288efed3706a0dd02f71a0 *man/K1K2.rd
+43b98b272864ba8d2adc80c8f931b4fd *man/K012.Rd
+a9232561ce1a1072aa03febfc0085d07 *man/K1K2.rd
 044e6c9485440128272bdb27074ab920 *man/Kci.Rd
 09c5defba1f3ff353f1337736517f4b8 *man/Kinhom.log.rd
 72ea056993e435cd0a874f725f53adc0 *man/Kmm.Rd

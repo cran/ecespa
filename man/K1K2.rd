@@ -40,9 +40,9 @@ Dixon (2002) sugested that some differences of these functions could provide pro
   \item{k1k2 }{Difference between \eqn{Ki(r)} and \eqn{Kj(r)}, with simulation envelopes.}
   \item{k1k12 }{Difference between \eqn{Ki(r)} and \eqn{Kij(r)}, with simulation envelopes.}
   \item{k2k12 }{Difference between \eqn{Kj(r)} and \eqn{Kij(r)}, with simulation envelopes.}
-  \item{}{}
-    \item{}{}
-\item{}{Each of the above elements is a \code{\link[spatstat.core]{fv.object}}, essentially a \code{data.frame} with the following items:}
+% 
+% 
+Each of the above elements is a \code{\link[spatstat.core]{fv.object}}, essentially a \code{data.frame} with the following items:
 \item{r }{The values of the argument r at which the functions have been estimated.}
 \item{hi }{Upper envelope of simulations.}
 \item{D }{The respective difference function \eqn{D(r)}, i.e., respectively, \eqn{Ki(r)-Kj(r)},  \eqn{Ki(r)-K^*ij(r)} or \eqn{Kj(r)-K^*ij(r)}.}
