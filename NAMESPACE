@@ -9,7 +9,8 @@ export("dixon2002", "getis","haz.ppp", "ipc.estK", "K1K2", "K012", "Kci", "Kclus
 
 importFrom("grDevices", "topo.colors")
 
-importFrom("spatstat.core", "Kcross", "Kcross.inhom", "Kest", "Kinhom", "Kmulti", "Poisson", "Smooth", "ppm", "predict.ppm")
+importFrom("spatstat.explore", "Kcross", "Kcross.inhom", "Kest", "Kinhom", "Kmulti", "Smooth")
+importFrom("spatstat.model", "Poisson", "ppm", "predict.ppm")
 
 importFrom("spatstat.random", "rThomas", "rmh", "rthin")
 
