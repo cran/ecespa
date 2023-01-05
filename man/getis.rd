@@ -36,10 +36,10 @@ getis(mippp, nx = 30, ny = 30, R = 10)
 
 \deqn{L[i](r) = sqrt((a/((n-1))*pi))*sum[j]e[i,j])}
 where the sum is over all points \emph{ j != i} that lie within a distance \emph{r} of the \emph{i}th point, \emph{a} is the area of the observation window,
-\emph{n} is the number of points in \eqn{X}, and \emph{e[i,j]} is the isotropic edge correction term (as described in \code{\link[spatstat.core]{Kest}}). The value of \emph{L[i](r)} can also
+\emph{n} is the number of points in \eqn{X}, and \emph{e[i,j]} is the isotropic edge correction term (as described in \code{\link[spatstat.explore]{Kest}}). The value of \emph{L[i](r)} can also
  be interpreted as one of the summands that contributes to the global estimate of the \eqn{L}-function. 
 
-The command \code{getis} actually computes the local \eqn{K}-function using \code{\link[spatstat.core]{Kcross}}. As the main objective of \code{getis} is to map the local density function,  
+The command \code{getis} actually computes the local \eqn{K}-function using \code{\link[spatstat.explore]{Kcross}}. As the main objective of \code{getis} is to map the local density function,  
 as sugested by Gestis and Franklin (1987: 476) a grid of  points (whose density is controled by \code{nx} and \code{ny}),  is used to accurately estimate the
 functions in empty or sparse areas. The S3 method  \code{plot.ecespa.getis}  plots the spatial distribution of  the local \eqn{K} or \eqn{L} function or other related local statistics, such as 
 \eqn{n[i](r)}, the number of neighbor points [=\eqn{ lambda*K[i](r)}]  or the deviations from  the expected value of  local  \eqn{L}  under CSR [= \eqn{L[i](r) -r}].  It some of the arguments \code{dimyx}, \code{xy} or \code{eps} is provided it will use the function 
@@ -61,14 +61,14 @@ functions in empty or sparse areas. The S3 method  \code{plot.ecespa.getis}  plo
   \code{plot.ecespa.getis} plots an interpolated map of the selected local statistics
 }
 \note{
-As \code{plot.ecespa.getis} interpolates over rectangular grid of points, it is not apropriate to map irregular windows. In those cases, \code{\link[spatstat.core]{Smooth.ppp}} of \code{spatstat}
+As \code{plot.ecespa.getis} interpolates over rectangular grid of points, it is not apropriate to map irregular windows. In those cases, \code{\link[spatstat.explore]{Smooth.ppp}} of \code{spatstat}
 can be used to interpolate the local statistics (see examples).
 }
 \references{ 
 Getis, A. and Franklin, J. 1987. Second-order neighbourhood analysis of mapped point patterns. \emph{Ecology} 68: 473-477. \doi{10.2307/1938452}.
  }
 \author{ Marcelino de la Cruz Rot }
-\seealso{ \code{\link[spatstat.core]{localK}}, a different approach in \pkg{spatstat}. }
+\seealso{ \code{\link[spatstat.explore]{localK}}, a different approach in \pkg{spatstat}. }
 \examples{
 
   ## Compare with fig. 5b of Getis & Franklin (1987: 476):

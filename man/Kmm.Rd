@@ -84,7 +84,7 @@ Penttinen, A. 2006. Statistics for Marked Point Patterns. In \emph{The Yearbook 
 \note{This implementation estimates \eqn{Kmm(r)} without any correction of border effects, so it must be used with caution. However, as \eqn{K(r)} is 
 also estimed without correction it migth compensate the border effects on the normalized \eqn{Kmm}-function.
 }
-\seealso{\code{\link[spatstat.core]{markcorr}} }
+\seealso{\code{\link[spatstat.explore]{markcorr}} }
 \examples{
 
   ## Figure 3.10 of De la Cruz (2008):
